@@ -1,0 +1,60 @@
+#SampleID	TreatmentGroup	ForwardFastqFile	ReverseFastqFile
+A1CSSS006	Water Hazelwood Green	/inputs/A1CSSS006_S71_R1_001.fastq.gz	/inputs/A1CSSS006_S71_R2_001.fastq.gz
+A1JSBP1	Water Boyce Park 1	/inputs/A1JSBP1_S127_R1_001.fastq.gz	/inputs/A1JSBP1_S127_R2_001.fastq.gz
+A1JSSS006	Water Hazelwood Green	/inputs/A1JSSS006_S73_R1_001.fastq.gz	/inputs/A1JSSS006_S73_R2_001.fastq.gz
+A1SWBP1	Water Boyce Park 1	/inputs/A1SWBP1_S128_R1_001.fastq.gz	/inputs/A1SWBP1_S128_R2_001.fastq.gz
+A1TYSS006	Water Hazelwood Green	/inputs/A1TYSS006_S72_R1_001.fastq.gz	/inputs/A1TYSS006_S72_R2_001.fastq.gz
+A2DLCFA1	Soil Carrie Furnace A	/inputs/A2DLCFA1_S89_R1_001.fastq.gz	/inputs/A2DLCFA1_S89_R2_001.fastq.gz
+A2SSBP2	Water Boyce Park 2	/inputs/A2SSBP2_S125_R1_001.fastq.gz	/inputs/A2SSBP2_S125_R2_001.fastq.gz
+A3JMBP4	Water Boyce Park 4	/inputs/A3JMBP4_S120_R1_001.fastq.gz	/inputs/A3JMBP4_S120_R2_001.fastq.gz
+A4MA34C	Soil Hazelwood Green	/inputs/A4MA34C_S91_R1_001.fastq.gz	/inputs/A4MA34C_S91_R2_001.fastq.gz
+A4NK34C	Soil Hazelwood Green	/inputs/A4NK34C_S90_R1_001.fastq.gz	/inputs/A4NK34C_S90_R2_001.fastq.gz
+A5HRBP6	Uncategorized	/inputs/A5HRBP6_S117_R1_001.fastq.gz	/inputs/A5HRBP6_S117_R2_001.fastq.gz
+A6AFCFD1	Soil Carrie Furnace D	/inputs/A6AFCFD1_S81_R1_001.fastq.gz	/inputs/A6AFCFD1_S81_R2_001.fastq.gz
+A6AFCFW	Water Carrie Furnace	/inputs/A6AFCFW_S115_R1_001.fastq.gz	/inputs/A6AFCFW_S115_R2_001.fastq.gz
+A6KFCFD1	Soil Carrie Furnace D	/inputs/A6KFCFD1_S82_R1_001.fastq.gz	/inputs/A6KFCFD1_S82_R2_001.fastq.gz
+C10ASCFC1	Soil Carrie Furnace C	/inputs/C10ASCFC1_S100_R1_001.fastq.gz	/inputs/C10ASCFC1_S100_R2_001.fastq.gz
+C10JBTRA	Water Point Allegheny	/inputs/C10JBTRA_S110_R1_001.fastq.gz	/inputs/C10JBTRA_S110_R2_001.fastq.gz
+C10PXCFC1	Soil Carrie Furnace C	/inputs/C10PXCFC1_S99_R1_001.fastq.gz	/inputs/C10PXCFC1_S99_R2_001.fastq.gz
+C10PXTRA	Water Point Allegheny	/inputs/C10PXTRA_S111_R1_001.fastq.gz	/inputs/C10PXTRA_S111_R2_001.fastq.gz
+C11RNCFE2	Soil Carrie Furnace E	/inputs/C11RNCFE2_S77_R1_001.fastq.gz	/inputs/C11RNCFE2_S77_R2_001.fastq.gz
+C12TPTRC	Water Control	/inputs/C12TPTRC_S129_R1_001.fastq.gz	/inputs/C12TPTRC_S129_R2_001.fastq.gz
+C7JWCFF1	Soil Carrie Furnace F	/inputs/C7JWCFF1_S76_R1_001.fastq.gz	/inputs/C7JWCFF1_S76_R2_001.fastq.gz
+C9GYCFE1	Soil Carrie Furnace E	/inputs/C9GYCFE1_S79_R1_001.fastq.gz	/inputs/C9GYCFE1_S79_R2_001.fastq.gz
+C9GYCFW	Water Carrie Furnace	/inputs/C9GYCFW_S114_R1_001.fastq.gz	/inputs/C9GYCFW_S114_R2_001.fastq.gz
+C9JJCFW	Water Carrie Furnace	/inputs/C9JJCFW_S113_R1_001.fastq.gz	/inputs/C9JJCFW_S113_R2_001.fastq.gz
+C9SBCFE1	Soil Carrie Furnace E	/inputs/C9SBCFE1_S78_R1_001.fastq.gz	/inputs/C9SBCFE1_S78_R2_001.fastq.gz
+C9SKTRC	Water Control	/inputs/C9SKTRC_S130_R1_001.fastq.gz	/inputs/C9SKTRC_S130_R2_001.fastq.gz
+G19ARCFF2	Soil Carrie Furnace F	/inputs/G19ARCFF2_S75_R1_001.fastq.gz	/inputs/G19ARCFF2_S75_R2_001.fastq.gz
+G19ENTRA	Water Point Allegheny	/inputs/G19ENTRA_S112_R1_001.fastq.gz	/inputs/G19ENTRA_S112_R2_001.fastq.gz
+G19RCCFF2	Soil Carrie Furnace F	/inputs/G19RCCFF2_S74_R1_001.fastq.gz	/inputs/G19RCCFF2_S74_R2_001.fastq.gz
+G20BC34B	Water Hazelwood Green	/inputs/G20BC34B_S94_R1_001.fastq.gz	/inputs/G20BC34B_S94_R2_001.fastq.gz
+G20BCTRM	Water Point Monongahela	/inputs/G20BCTRM_S106_R1_001.fastq.gz	/inputs/G20BCTRM_S106_R2_001.fastq.gz
+G20EB34B	Water Hazelwood Green	/inputs/G20EB34B_S92_R1_001.fastq.gz	/inputs/G20EB34B_S92_R2_001.fastq.gz
+G20EBTRM	Water Point Monongahela	/inputs/G20EBTRM_S105_R1_001.fastq.gz	/inputs/G20EBTRM_S105_R2_001.fastq.gz
+G20PS34B	Water Hazelwood Green	/inputs/G20PS34B_S93_R1_001.fastq.gz	/inputs/G20PS34B_S93_R2_001.fastq.gz
+G20PSTRM	Water Point Monongahela	/inputs/G20PSTRM_S104_R1_001.fastq.gz	/inputs/G20PSTRM_S104_R2_001.fastq.gz
+G21DSTRS	Water Ohio	/inputs/G21DSTRS_S103_R1_001.fastq.gz	/inputs/G21DSTRS_S103_R2_001.fastq.gz
+G21RFTRS	Water Ohio	/inputs/G21RFTRS_S102_R1_001.fastq.gz	/inputs/G21RFTRS_S102_R2_001.fastq.gz
+G21TDTRS	Water Ohio	/inputs/G21TDTRS_S101_R1_001.fastq.gz	/inputs/G21TDTRS_S101_R2_001.fastq.gz
+G22EHTRB	Water Braddock	/inputs/G22EHTRB_S109_R1_001.fastq.gz	/inputs/G22EHTRB_S109_R2_001.fastq.gz
+G22MD32C	Soil Hazelwood Green	/inputs/G22MD32C_S97_R1_001.fastq.gz	/inputs/G22MD32C_S97_R2_001.fastq.gz
+G22SO32C	Soil Hazelwood Green	/inputs/G22SO32C_S96_R1_001.fastq.gz	/inputs/G22SO32C_S96_R2_001.fastq.gz
+G22SOTRB	Water Braddock	/inputs/G22SOTRB_S107_R1_001.fastq.gz	/inputs/G22SOTRB_S107_R2_001.fastq.gz
+G22YP32C	Soil Hazelwood Green	/inputs/G22YP32C_S95_R1_001.fastq.gz	/inputs/G22YP32C_S95_R2_001.fastq.gz
+G22YPTRB	Water Braddock	/inputs/G22YPTRB_S108_R1_001.fastq.gz	/inputs/G22YPTRB_S108_R2_001.fastq.gz
+G23JYCFC2	Soil Carrie Furnace C	/inputs/G23JYCFC2_S98_R1_001.fastq.gz	/inputs/G23JYCFC2_S98_R2_001.fastq.gz
+T13RYCFB1	Soil Carrie Furnace B	/inputs/T13RYCFB1_S85_R1_001.fastq.gz	/inputs/T13RYCFB1_S85_R2_001.fastq.gz
+T13SSCFB1	Soil Carrie Furnace B	/inputs/T13SSCFB1_S86_R1_001.fastq.gz	/inputs/T13SSCFB1_S86_R2_001.fastq.gz
+T14ELCFA2	Soil Carrie Furnace A	/inputs/T14ELCFA2_S88_R1_001.fastq.gz	/inputs/T14ELCFA2_S88_R2_001.fastq.gz
+T14MYBP2	Water Boyce Park 2	/inputs/T14MYBP2_S123_R1_001.fastq.gz	/inputs/T14MYBP2_S123_R2_001.fastq.gz
+T14OMBP2	Water Boyce Park 2	/inputs/T14OMBP2_S124_R1_001.fastq.gz	/inputs/T14OMBP2_S124_R2_001.fastq.gz
+T14SWCFA2	Soil Carrie Furnace A	/inputs/T14SWCFA2_S87_R1_001.fastq.gz	/inputs/T14SWCFA2_S87_R2_001.fastq.gz
+T15CDCFD2	Soil Carrie Furnace D	/inputs/T15CDCFD2_S80_R1_001.fastq.gz	/inputs/T15CDCFD2_S80_R2_001.fastq.gz
+T15SBBP4	Water Boyce Park 4	/inputs/T15SBBP4_S121_R1_001.fastq.gz	/inputs/T15SBBP4_S121_R2_001.fastq.gz
+T15WSBP4	Water Boyce Park 4	/inputs/T15WSBP4_S122_R1_001.fastq.gz	/inputs/T15WSBP4_S122_R2_001.fastq.gz
+T16BCCFC2	Soil Carrie Furnace C	/inputs/T16BCCFC2_S83_R1_001.fastq.gz	/inputs/T16BCCFC2_S83_R2_001.fastq.gz
+T16RMBP5	Water Boyce Park 5	/inputs/T16RMBP5_S118_R1_001.fastq.gz	/inputs/T16RMBP5_S118_R2_001.fastq.gz
+T17WRCFB2	Soil Carrie Furnace B	/inputs/T17WRCFB2_S84_R1_001.fastq.gz	/inputs/T17WRCFB2_S84_R2_001.fastq.gz
+T18JJBP5	Water Boyce Park 5	/inputs/T18JJBP5_S119_R1_001.fastq.gz	/inputs/T18JJBP5_S119_R2_001.fastq.gz
+T18LHBP1	Water Boyce Park 1	/inputs/T18LHBP1_S126_R1_001.fastq.gz	/inputs/T18LHBP1_S126_R2_001.fastq.gz

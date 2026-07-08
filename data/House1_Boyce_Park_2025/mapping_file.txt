@@ -1,0 +1,11 @@
+#SampleID	TreatmentGroup	ForwardFastqFile	ReverseFastqFile
+A1JSBP1	Water Boyce Park 1	/inputs/A1JSBP1_S127_R1_001.fastq.gz	/inputs/A1JSBP1_S127_R2_001.fastq.gz
+A1SWBP1	Water Boyce Park 1	/inputs/A1SWBP1_S128_R1_001.fastq.gz	/inputs/A1SWBP1_S128_R2_001.fastq.gz
+A2SSBP2	Water Boyce Park 2	/inputs/A2SSBP2_S125_R1_001.fastq.gz	/inputs/A2SSBP2_S125_R2_001.fastq.gz
+A3JMBP4	Water Boyce Park 4	/inputs/A3JMBP4_S120_R1_001.fastq.gz	/inputs/A3JMBP4_S120_R2_001.fastq.gz
+T14MYBP2	Water Boyce Park 2	/inputs/T14MYBP2_S123_R1_001.fastq.gz	/inputs/T14MYBP2_S123_R2_001.fastq.gz
+T14OMBP2	Water Boyce Park 2	/inputs/T14OMBP2_S124_R1_001.fastq.gz	/inputs/T14OMBP2_S124_R2_001.fastq.gz
+T15SBBP4	Water Boyce Park 4	/inputs/T15SBBP4_S121_R1_001.fastq.gz	/inputs/T15SBBP4_S121_R2_001.fastq.gz
+T15WSBP4	Water Boyce Park 4	/inputs/T15WSBP4_S122_R1_001.fastq.gz	/inputs/T15WSBP4_S122_R2_001.fastq.gz
+T16RMBP5	Water Boyce Park 5	/inputs/T16RMBP5_S118_R1_001.fastq.gz	/inputs/T16RMBP5_S118_R2_001.fastq.gz
+T18JJBP5	Water Boyce Park 5	/inputs/T18JJBP5_S119_R1_001.fastq.gz	/inputs/T18JJBP5_S119_R2_001.fastq.gz
