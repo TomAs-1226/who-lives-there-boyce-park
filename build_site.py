@@ -50,7 +50,7 @@ HERO = f"""
   <div class="kicker">CMU Pre-College Computational Biology &middot; Group A3 (Alphas)</div>
   <h1>Who Lives There? The Tiny Life in Boyce Park Pond</h1>
   <p>We read the DNA of the bacteria and algae in Boyce Park pond water to find out who lives there, and whether old coal mine runoff is shaping the pond.</p>
-  <p class="answer"><b>The short answer:</b> the pretty pond is really acid mine drainage water, and the microbe that gives it away is <b>Ferrovum</b>, an iron eater.</p>
+  <p class="answer"><b>The short answer:</b> the pretty pond is really acid mine drainage water. The clearest sign is <b>Ferrovum</b> (an iron eater), backed up by a crew of acid loving strains like <b>Acidocella</b> and <b>Acidiphilium</b>.</p>
   <div class="btnrow">
     <a class="btn run" href="{COLAB}">Run every cell in Colab</a>
     <a class="btn gh" href="{GH}">View the code on GitHub</a>

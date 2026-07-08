@@ -7828,7 +7828,7 @@ body.jp-Notebook, body{ max-width:62rem !important; margin:0 auto !important;
   <div class="kicker">CMU Pre-College Computational Biology &middot; Group A3 (Alphas)</div>
   <h1>Who Lives There? The Tiny Life in Boyce Park Pond</h1>
   <p>We read the DNA of the bacteria and algae in Boyce Park pond water to find out who lives there, and whether old coal mine runoff is shaping the pond.</p>
-  <p class="answer"><b>The short answer:</b> the pretty pond is really acid mine drainage water, and the microbe that gives it away is <b>Ferrovum</b>, an iron eater.</p>
+  <p class="answer"><b>The short answer:</b> the pretty pond is really acid mine drainage water. The clearest sign is <b>Ferrovum</b> (an iron eater), backed up by a crew of acid loving strains like <b>Acidocella</b> and <b>Acidiphilium</b>.</p>
   <div class="btnrow">
     <a class="btn run" href="https://colab.research.google.com/github/TomAs-1226/who-lives-there-boyce-park/blob/main/Boyce_Park_Taxonomy.ipynb">Run every cell in Colab</a>
     <a class="btn gh" href="https://github.com/TomAs-1226/who-lives-there-boyce-park">View the code on GitHub</a>
@@ -7843,7 +7843,7 @@ body.jp-Notebook, body{ max-width:62rem !important; margin:0 auto !important;
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Who-Lives-There?-The-Tiny-Life-in-Boyce-Park-Pond">Who Lives There? The Tiny Life in Boyce Park Pond<a class="anchor-link" href="#Who-Lives-There?-The-Tiny-Life-in-Boyce-Park-Pond">¶</a></h1><p><strong>CMU Pre-College Computational Biology, Module 2. Group A3 (Alphas): Thomas Yu, Thomas Kellog, Lexi Dai, Sarah Wu.</strong></p>
-<p>We read the DNA of the bacteria and algae in Boyce Park pond water to find out who lives there, and whether old coal mine runoff is shaping the pond.</p>
+<p>We read the DNA of the bacteria and algae in Boyce Park pond water to find out who lives there, and whether old coal mine runoff is shaping the pond. We identify the most common living things ourselves, check how sure we can be, and compare the pond to the city rivers. Every step below has a short, plain explanation so anyone can follow along.</p>
 <p><strong><a href="https://colab.research.google.com/github/TomAs-1226/who-lives-there-boyce-park/blob/main/Boyce_Park_Taxonomy.ipynb">Click here to run every cell in Google Colab.</a></strong> Each cell runs on its own, top to bottom.</p>
 </div>
 </div>
@@ -7855,7 +7855,7 @@ body.jp-Notebook, body{ max-width:62rem !important; margin:0 auto !important;
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-0:-Load-the-data">Step 0: Load the data<a class="anchor-link" href="#Step-0:-Load-the-data">¶</a></h2><p>Open the files the lab gave us: one set for our pond, one shared set that also has the rivers and the clean water controls.</p>
+<h2 id="Step-0:-Load-the-data">Step 0: Load the data<a class="anchor-link" href="#Step-0:-Load-the-data">¶</a></h2><p>Open the files the lab gave us: one set for our pond, and one shared set that also has the rivers and the clean water controls. The lab already read the DNA and cleaned it up, so we get tidy tables instead of raw machine output. That lets us start straight from the results and do our own checks on them.</p>
 </div>
 </div>
 </div>
@@ -8042,7 +8042,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-1:-Name-the-microbes-ourselves">Step 1: Name the microbes ourselves<a class="anchor-link" href="#Step-1:-Name-the-microbes-ourselves">¶</a></h2><p>We take the <strong>20 most common microbes</strong> (about two thirds of the pond) and look up each one's DNA with <strong>BLAST</strong>, a free NIH tool that finds the closest known match. Same idea as our aligner, just bigger.</p>
+<h2 id="Step-1:-Name-the-microbes-ourselves">Step 1: Name the microbes ourselves<a class="anchor-link" href="#Step-1:-Name-the-microbes-ourselves">¶</a></h2><p>We take the <strong>20 most common microbes</strong> (about two thirds of everything in the pond) and look up each one's DNA with <strong>BLAST</strong>, a free NIH tool that finds the closest known match in a giant library. It is the same search and score idea as our aligner project, just at full scale. We only do the top 20 because looking up thousands by hand is not realistic, and those 20 already tell most of the story. For each one, BLAST hands back the closest named organism and a score for how good the match is.</p>
 </div>
 </div>
 </div>
@@ -8579,7 +8579,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-2:-Check-the-names,-and-check-for-contamination">Step 2: Check the names, and check for contamination<a class="anchor-link" href="#Step-2:-Check-the-names,-and-check-for-contamination">¶</a></h2><p>We put <strong>our BLAST names next to the lab's names</strong>. They mostly agree. Where they differ, BLAST usually names the exact organism the lab only guessed at a broad group for. Our best example: the number one microbe, which the lab called just "Burkholderiales" but BLAST names <strong>Ferrovum</strong>, a mine drainage iron eater.</p>
+<h2 id="Step-2:-Check-the-names,-and-check-for-contamination">Step 2: Check the names, and check for contamination<a class="anchor-link" href="#Step-2:-Check-the-names,-and-check-for-contamination">¶</a></h2><p>We do not just take the lab's word for it. We put <strong>our BLAST names next to the lab's names</strong> and see where they line up. They mostly agree, which is a good sign. Where they differ, it is usually because BLAST could name the exact organism while the lab only reached a broad group. Our best example is the number one microbe: the lab called it just "Burkholderiales," but our BLAST names it <strong>Ferrovum</strong>, a mine drainage iron eater. That is a real improvement on the automatic result.</p>
 </div>
 </div>
 </div>
@@ -8844,7 +8844,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The lab also runs bottles of <strong>pure water</strong>. Anything common in those got in from handling, not the pond, so we flag it as contamination.</p>
+<p>The lab also runs bottles of <strong>pure water</strong> through the same machines. Nothing should show up in those, so anything that does got in from gloves, dust, or the kit chemicals, not the pond. We check each of our top microbes against those bottles and flag as contamination anything that is common in them. This is how we make sure we are not telling a story about something that was never really in the water.</p>
 </div>
 </div>
 </div>
@@ -9121,7 +9121,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-3:-What-lives-in-the-pond">Step 3: What lives in the pond<a class="anchor-link" href="#Step-3:-What-lives-in-the-pond">¶</a></h2><p>Two charts: what lives at each of our four sampling spots, and the most common types overall. We use <strong>shares (percentages)</strong> so a sample is not bigger just because more of its DNA was read.</p>
+<h2 id="Step-3:-What-lives-in-the-pond">Step 3: What lives in the pond<a class="anchor-link" href="#Step-3:-What-lives-in-the-pond">¶</a></h2><p>Now we add up the numbers to see the makeup of the community. The first chart groups microbes into big families and shows how that mix changes across our four sampling spots. The second chart shows the most common individual types overall. We use <strong>shares (percentages)</strong> instead of raw counts, so a sample does not look bigger just because more of its DNA happened to be read.</p>
 </div>
 </div>
 </div>
@@ -9203,7 +9203,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-4:-Two-comparison-pictures">Step 4: Two comparison pictures<a class="anchor-link" href="#Step-4:-Two-comparison-pictures">¶</a></h2><p>A <strong>similarity map</strong>: each dot is a water sample, and similar samples sit close together. Picture A puts our pond next to the rivers. Picture B shows just our own sampling spots.</p>
+<h2 id="Step-4:-Two-comparison-pictures">Step 4: Two comparison pictures<a class="anchor-link" href="#Step-4:-Two-comparison-pictures">¶</a></h2><p>To compare whole communities, we make a <strong>similarity map</strong>. Each dot is one water sample, and samples with similar life sit close together while different ones sit far apart. Under the hood we score how different every pair of samples is, then lay them out on a flat map. Picture A puts our pond next to the rivers and the other sites. Picture B zooms into just our own pond, colored by sampling spot.</p>
 </div>
 </div>
 </div>
@@ -9379,9 +9379,46 @@ BP5    2
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Conclusion:-our-answer">Conclusion: our answer<a class="anchor-link" href="#Conclusion:-our-answer">¶</a></h2><p><strong>The question:</strong> does Boyce Park pond live up to its scenic looks, or is mine drainage shaping who lives there?</p>
-<p><strong>Our answer: mine drainage is shaping it, and one microbe proves it.</strong></p>
-<p>The most common living thing in the pond (about <strong>1 in 3 of everything</strong>) is <strong>Ferrovum</strong>, an iron eating bacterium. Its closest DNA match is the strain <strong>Ferrovum sp. PN-J174, at 99% match</strong>. Ferrovum only lives in acidic, iron rich water, the kind old coal mines leave behind. Acid loving bacteria (Acidocella, Acidiphilium) and even acid loving algae (Eunotia) back it up, and none of them showed up in our clean water controls.</p>
-<p><strong>So the pretty pond is really acid mine drainage water, and the microbe that gives it away is Ferrovum.</strong> A quick pH and iron test would confirm it.</p>
+<p><strong>Our answer: mine drainage is shaping it, and it is not just one microbe. A whole set of strains all point the same way.</strong></p>
+<p>When we look up the DNA of our most common microbes, the closest matches are a lineup of acid and iron specialists. These are the specific strains we found, with how close the DNA match was:</p>
+<table>
+<thead>
+<tr>
+<th>Strain (closest DNA match)</th>
+<th>Match</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ferrovum sp. PN-J174</strong></td>
+<td>99%</td>
+<td>The number one microbe in the pond (about 1 in 3 of everything). An iron eater found in mine drainage.</td>
+</tr>
+<tr>
+<td><strong>Acidocella aquatica Ok2G</strong></td>
+<td>99%</td>
+<td>An acid loving bacterium.</td>
+</tr>
+<tr>
+<td><strong>Acidiphilium rubrum Colony12</strong></td>
+<td>99%</td>
+<td>Another acid lover that also handles iron.</td>
+</tr>
+<tr>
+<td><strong>Eunotia naegelii</strong> (an alga)</td>
+<td>99%</td>
+<td>An acid loving alga, so even the green life prefers acid.</td>
+</tr>
+<tr>
+<td><strong>Klebsormidium nitens</strong> (an alga)</td>
+<td>99%</td>
+<td>A second acid tolerant alga.</td>
+</tr>
+</tbody>
+</table>
+<p>None of these belong in a clean, normal pond, and none of them showed up in our clean water controls, so they are real. Together they are the clear fingerprint of <strong>acid mine drainage</strong>.</p>
+<p><strong>So the pretty pond is really acid mine drainage water.</strong> The single clearest sign is <strong>Ferrovum sp. PN-J174</strong>, but a whole crew of acid loving strains backs it up. A quick pH and iron test would confirm it directly.</p>
 </div>
 </div>
 </div>
