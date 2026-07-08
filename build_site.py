@@ -41,6 +41,11 @@ body.jp-Notebook, body{ max-width:62rem !important; margin:0 auto !important;
 .site-foot{ margin:2.5rem -1rem 0; padding:1.4rem 1.6rem; background:#123a34; color:#cfe3dd;
   border-radius:16px 16px 0 0; font-size:.9rem; }
 .site-foot b{ color:#fff; }
+.portion-flag{ margin:2.2rem 0 .4rem; padding:.55rem .95rem; border-radius:10px;
+  background:var(--iron); color:#fff; font-weight:700; font-size:.92rem;
+  display:flex; gap:.55rem; align-items:center; flex-wrap:wrap; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+.portion-flag .pn{ background:rgba(255,255,255,.22); border-radius:6px; padding:.1rem .5rem; }
+.portion-flag .pw{ font-weight:500; opacity:.92; }
 @media (max-width:640px){ .site-hero h1{ font-size:1.6rem; } }
 </style>
 """
@@ -69,5 +74,28 @@ html = html.replace("</head>", STYLE + "</head>", 1)
 html = re.sub(r"(<body[^>]*>)", r"\1" + HERO, html, count=1)
 html = html.replace("</body>", FOOTER + "</body>", 1)
 
+# Presenter handoff markers, placed before each portion's first heading so they
+# line up with the presentation guide as you scroll top to bottom.
+def flag(n, who, what):
+    return (f'<div class="portion-flag"><span class="pn">Portion {n} of 4</span> '
+            f'{who} presents from here <span class="pw">({what})</span></div>')
+FLAGS = [
+    ("Step 0: Load the data",                                   flag(1, "Thomas Yu", "the pond and how we name microbes")),
+    ("Step 2: Check the names, and check for contamination",     flag(2, "Sarah Wu", "checking our work and contamination")),
+    ("Step 3: What lives in the pond",                          flag(3, "Lexi Dai", "the results and the maps")),
+    ("Step 5: The story",                                       flag(4, "Thomas Kellog", "the story and the answer")),
+]
+def insert_before_heading(doc, text, banner):
+    i = doc.find(text)
+    if i == -1: return doc
+    h = doc.rfind("<h2", 0, i)
+    return doc[:h] + banner + doc[h:] if h != -1 else doc
+placed = 0
+for text, banner in FLAGS:
+    before = html
+    html = insert_before_heading(html, text, banner)
+    placed += (html != before)
+
 open(path, "w", encoding="utf-8").write(html)
+print("Presenter markers placed:", placed, "of", len(FLAGS))
 print("Wrote index.html with header + footer (", len(html)//1024, "KB )")

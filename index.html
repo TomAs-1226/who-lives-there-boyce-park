@@ -7820,6 +7820,11 @@ body.jp-Notebook, body{ max-width:62rem !important; margin:0 auto !important;
 .site-foot{ margin:2.5rem -1rem 0; padding:1.4rem 1.6rem; background:#123a34; color:#cfe3dd;
   border-radius:16px 16px 0 0; font-size:.9rem; }
 .site-foot b{ color:#fff; }
+.portion-flag{ margin:2.2rem 0 .4rem; padding:.55rem .95rem; border-radius:10px;
+  background:var(--iron); color:#fff; font-weight:700; font-size:.92rem;
+  display:flex; gap:.55rem; align-items:center; flex-wrap:wrap; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+.portion-flag .pn{ background:rgba(255,255,255,.22); border-radius:6px; padding:.1rem .5rem; }
+.portion-flag .pw{ font-weight:500; opacity:.92; }
 @media (max-width:640px){ .site-hero h1{ font-size:1.6rem; } }
 </style>
 </head>
@@ -7855,7 +7860,7 @@ body.jp-Notebook, body{ max-width:62rem !important; margin:0 auto !important;
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-0:-Load-the-data">Step 0: Load the data<a class="anchor-link" href="#Step-0:-Load-the-data">¶</a></h2><p>Open the files the lab gave us: one set for our pond, and one shared set that also has the rivers and the clean water controls. The lab already read the DNA and cleaned it up, so we get tidy tables instead of raw machine output. That lets us start straight from the results and do our own checks on them.</p>
+<div class="portion-flag"><span class="pn">Portion 1 of 4</span> Thomas Yu presents from here <span class="pw">(the pond and how we name microbes)</span></div><h2 id="Step-0:-Load-the-data">Step 0: Load the data<a class="anchor-link" href="#Step-0:-Load-the-data">¶</a></h2><p>Open the files the lab gave us: one set for our pond, and one shared set that also has the rivers and the clean water controls. The lab already read the DNA and cleaned it up, so we get tidy tables instead of raw machine output. That lets us start straight from the results and do our own checks on them.</p>
 </div>
 </div>
 </div>
@@ -8579,7 +8584,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-2:-Check-the-names,-and-check-for-contamination">Step 2: Check the names, and check for contamination<a class="anchor-link" href="#Step-2:-Check-the-names,-and-check-for-contamination">¶</a></h2><p>We do not just take the lab's word for it. We put <strong>our BLAST names next to the lab's names</strong> and see where they line up. They mostly agree, which is a good sign. Where they differ, it is usually because BLAST could name the exact organism while the lab only reached a broad group. Our best example is the number one microbe: the lab called it just "Burkholderiales," but our BLAST names it <strong>Ferrovum</strong>, a mine drainage iron eater. That is a real improvement on the automatic result.</p>
+<div class="portion-flag"><span class="pn">Portion 2 of 4</span> Sarah Wu presents from here <span class="pw">(checking our work and contamination)</span></div><h2 id="Step-2:-Check-the-names,-and-check-for-contamination">Step 2: Check the names, and check for contamination<a class="anchor-link" href="#Step-2:-Check-the-names,-and-check-for-contamination">¶</a></h2><p>We do not just take the lab's word for it. We put <strong>our BLAST names next to the lab's names</strong> and see where they line up. They mostly agree, which is a good sign. Where they differ, it is usually because BLAST could name the exact organism while the lab only reached a broad group. Our best example is the number one microbe: the lab called it just "Burkholderiales," but our BLAST names it <strong>Ferrovum</strong>, a mine drainage iron eater. That is a real improvement on the automatic result.</p>
 </div>
 </div>
 </div>
@@ -9121,7 +9126,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-3:-What-lives-in-the-pond">Step 3: What lives in the pond<a class="anchor-link" href="#Step-3:-What-lives-in-the-pond">¶</a></h2><p>Now we add up the numbers to see the makeup of the community. The first chart groups microbes into big families and shows how that mix changes across our four sampling spots. The second chart shows the most common individual types overall. We use <strong>shares (percentages)</strong> instead of raw counts, so a sample does not look bigger just because more of its DNA happened to be read.</p>
+<div class="portion-flag"><span class="pn">Portion 3 of 4</span> Lexi Dai presents from here <span class="pw">(the results and the maps)</span></div><h2 id="Step-3:-What-lives-in-the-pond">Step 3: What lives in the pond<a class="anchor-link" href="#Step-3:-What-lives-in-the-pond">¶</a></h2><p>Now we add up the numbers to see the makeup of the community. The first chart groups microbes into big families and shows how that mix changes across our four sampling spots. The second chart shows the most common individual types overall. We use <strong>shares (percentages)</strong> instead of raw counts, so a sample does not look bigger just because more of its DNA happened to be read.</p>
 </div>
 </div>
 </div>
@@ -9319,7 +9324,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-5:-The-story">Step 5: The story<a class="anchor-link" href="#Step-5:-The-story">¶</a></h2><p>The pond is run by <strong>one iron eating bacterium</strong>, plus <strong>algae</strong>, plus a crew of <strong>acid loving microbes</strong>. That mix is the fingerprint of <strong>acid mine drainage</strong>: acidic, iron rich runoff from old coal mines.</p>
+<div class="portion-flag"><span class="pn">Portion 4 of 4</span> Thomas Kellog presents from here <span class="pw">(the story and the answer)</span></div><h2 id="Step-5:-The-story">Step 5: The story<a class="anchor-link" href="#Step-5:-The-story">¶</a></h2><p>The pond is run by <strong>one iron eating bacterium</strong>, plus <strong>algae</strong>, plus a crew of <strong>acid loving microbes</strong>. That mix is the fingerprint of <strong>acid mine drainage</strong>: acidic, iron rich runoff from old coal mines.</p>
 <p>The main characters, in plain words:</p>
 <table>
 <thead>
