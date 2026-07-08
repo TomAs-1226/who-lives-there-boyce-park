@@ -6,6 +6,10 @@ We looked at the tiny life (bacteria and algae) in the water of a pond at **Boyc
 
 **Short answer: yes.** The pond is run by an iron eating bacterium and a crew of acid loving microbes, which is the classic sign of acid mine drainage. The full story, with charts, is in the notebook.
 
+## Read it as a website
+
+**[View the project as a web page](https://tomas-1226.github.io/who-lives-there-boyce-park/)** (nothing to install, just click and read).
+
 ## The notebook
 
 **[Boyce_Park_Taxonomy.ipynb](Boyce_Park_Taxonomy.ipynb)** has everything: the code, the charts, and a plain language write up in every section. GitHub shows the charts right in the page, so you can read it without running anything.
