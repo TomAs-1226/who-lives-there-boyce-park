@@ -7793,8 +7793,48 @@ a.anchor-link {
     white-space: normal;
   }
 </style>
-<!-- End of mermaid configuration --></head>
+<!-- End of mermaid configuration -->
+<style>
+:root{ --ink:#1f2a27; --teal:#155e52; --iron:#b0592a; --bg:#eef2f0; --card:#ffffff; --line:#e2e8e4; }
+html{ background:var(--bg); }
+body.jp-Notebook, body{ max-width:62rem !important; margin:0 auto !important;
+  padding:0 1rem 3rem !important; background:var(--bg) !important;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; }
+.jp-Cell{ background:var(--card); }
+.site-hero{ background:linear-gradient(135deg,#123a34,#1f5f54); color:#fff;
+  border-radius:0 0 16px 16px; padding:2.2rem 1.6rem 1.8rem; margin:0 -1rem 1.5rem;
+  box-shadow:0 6px 20px rgba(0,0,0,.12); }
+.site-hero .kicker{ text-transform:uppercase; letter-spacing:.12em; font-size:.72rem;
+  font-weight:700; color:#bfe6db; }
+.site-hero h1{ font-family:Georgia,'Times New Roman',serif; font-size:2rem; margin:.3rem 0 .5rem;
+  line-height:1.15; color:#fff; }
+.site-hero p{ margin:.2rem 0; color:#e6f2ee; max-width:46rem; line-height:1.5; }
+.site-hero .answer{ font-size:1.05rem; }
+.site-hero .answer b{ color:#ffd9a8; }
+.btnrow{ margin-top:1.1rem; display:flex; gap:.6rem; flex-wrap:wrap; }
+.btn{ display:inline-block; text-decoration:none; font-weight:650; font-size:.9rem;
+  padding:.55rem .95rem; border-radius:9px; }
+.btn.run{ background:#ffb454; color:#3a2610; }
+.btn.gh{ background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.35); }
+.btn:hover{ filter:brightness(1.06); }
+.site-foot{ margin:2.5rem -1rem 0; padding:1.4rem 1.6rem; background:#123a34; color:#cfe3dd;
+  border-radius:16px 16px 0 0; font-size:.9rem; }
+.site-foot b{ color:#fff; }
+@media (max-width:640px){ .site-hero h1{ font-size:1.6rem; } }
+</style>
+</head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+<header class="site-hero">
+  <div class="kicker">CMU Pre-College Computational Biology &middot; Group A3 (Alphas)</div>
+  <h1>Who Lives There? The Tiny Life in Boyce Park Pond</h1>
+  <p>We read the DNA of the bacteria and algae in Boyce Park pond water to find out who lives there, and whether old coal mine runoff is shaping the pond.</p>
+  <p class="answer"><b>The short answer:</b> the pretty pond is really acid mine drainage water, and the microbe that gives it away is <b>Ferrovum</b>, an iron eater.</p>
+  <div class="btnrow">
+    <a class="btn run" href="https://colab.research.google.com/github/TomAs-1226/who-lives-there-boyce-park/blob/main/Boyce_Park_Taxonomy.ipynb">Run every cell in Colab</a>
+    <a class="btn gh" href="https://github.com/TomAs-1226/who-lives-there-boyce-park">View the code on GitHub</a>
+  </div>
+</header>
+
 <main>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -7802,20 +7842,9 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Who-Lives-There?-A-Look-at-the-Tiny-Life-in-Boyce-Park-Pond-Water">Who Lives There? A Look at the Tiny Life in Boyce Park Pond Water<a class="anchor-link" href="#Who-Lives-There?-A-Look-at-the-Tiny-Life-in-Boyce-Park-Pond-Water">¶</a></h1><p><strong>CMU Pre-College Computational Biology, Module 2 Project</strong>
-<strong>Group A3 (Alphas):</strong> Thomas Yu, Thomas Kellog, Lexi Dai, Sarah Wu</p>
-<h2 id="The-short-version">The short version<a class="anchor-link" href="#The-short-version">¶</a></h2><p>We studied the water from a pond in <strong>Boyce Park</strong>, a county park built on land that used to be coal mining country. The big question the project asks us is simple: the pond looks pretty and scenic, but is it actually healthy, or is old mine runoff quietly shaping the life inside it?</p>
-<p>To find out, we look at the <strong>bacteria and algae living in the water</strong>. Every bacterium carries a kind of ID tag in its DNA (a gene called 16S). A lab already read those ID tags for us and handed us tidy files with the results. Our job is to figure out <strong>who is living in the pond, whether we can trust those IDs, and how this pond compares to the city rivers</strong>, and then explain what it all means.</p>
-<h2 id="What-this-notebook-does,-in-order">What this notebook does, in order<a class="anchor-link" href="#What-this-notebook-does,-in-order">¶</a></h2><ol start="0">
-<li>Load the files the lab gave us.</li>
-<li>Identify the most common living things ourselves, using a DNA search tool called BLAST.</li>
-<li>Compare our answers to the lab's answers, and check for contamination.</li>
-<li>Make simple charts of what lives in the pond.</li>
-<li>Make two comparison pictures: our pond next to the rivers, and our own sampling spots next to each other.</li>
-<li>Tell the story of what we found.</li>
-<li>Explain, in plain terms, every tool we used.</li>
-</ol>
-<p><em>A quick note on how to read the results: a name for a whole family or group is usually solid, but a guess at an exact species from this kind of data is shaky. So we trust the broad names more than the very specific ones, and we say so when a guess is uncertain.</em></p>
+<h1 id="Who-Lives-There?-The-Tiny-Life-in-Boyce-Park-Pond">Who Lives There? The Tiny Life in Boyce Park Pond<a class="anchor-link" href="#Who-Lives-There?-The-Tiny-Life-in-Boyce-Park-Pond">¶</a></h1><p><strong>CMU Pre-College Computational Biology, Module 2. Group A3 (Alphas): Thomas Yu, Thomas Kellog, Lexi Dai, Sarah Wu.</strong></p>
+<p>We read the DNA of the bacteria and algae in Boyce Park pond water to find out who lives there, and whether old coal mine runoff is shaping the pond.</p>
+<p><strong><a href="https://colab.research.google.com/github/TomAs-1226/who-lives-there-boyce-park/blob/main/Boyce_Park_Taxonomy.ipynb">Click here to run every cell in Google Colab.</a></strong> Each cell runs on its own, top to bottom.</p>
 </div>
 </div>
 </div>
@@ -7826,7 +7855,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-0:-Load-the-data">Step 0: Load the data<a class="anchor-link" href="#Step-0:-Load-the-data">¶</a></h2>
+<h2 id="Step-0:-Load-the-data">Step 0: Load the data<a class="anchor-link" href="#Step-0:-Load-the-data">¶</a></h2><p>Open the files the lab gave us: one set for our pond, one shared set that also has the rivers and the clean water controls.</p>
 </div>
 </div>
 </div>
@@ -7838,8 +7867,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Google Colab already has the number and chart tools we need.</span>
-<span class="c1"># The one extra tool (Biopython) is only used if you re-run the DNA search live.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Colab already has the number and chart tools. Biopython is only used if you redo the DNA search live.</span>
 <span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>biopython
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">io</span><span class="o">,</span><span class="w"> </span><span class="nn">csv</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span><span class="o">,</span><span class="w"> </span><span class="nn">math</span>
@@ -7882,7 +7910,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Tell-the-notebook-where-the-data-is">Tell the notebook where the data is<a class="anchor-link" href="#Tell-the-notebook-where-the-data-is">¶</a></h3><p>The data is two folders in our shared Google Drive: our pond (<code>House1_Boyce_Park_2025</code>) and a shared set that has every other site including the rivers and the clean water controls (<code>Baseline_AllSamples_2025</code>). Run the next cell, let Google Drive connect, and set <code>DATA_ROOT</code> to the folder that holds those two folders.</p>
+<p>The two data folders live in this repo, or in your Google Drive. This cell finds them either way.</p>
 </div>
 </div>
 </div>
@@ -7894,10 +7922,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Find the data. If the two folders are already here (for example you cloned the</span>
-<span class="c1"># GitHub repo, which includes them in a data folder), just use them. Otherwise</span>
-<span class="c1"># connect Google Drive.</span>
-<span class="n">DATA_ROOT</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">DATA_ROOT</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">for</span> <span class="n">place</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'.'</span><span class="p">,</span> <span class="s1">'data'</span><span class="p">]:</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">place</span><span class="p">,</span> <span class="s1">'House1_Boyce_Park_2025'</span><span class="p">,</span> <span class="s1">'feature-table.tsv'</span><span class="p">)):</span>
         <span class="n">DATA_ROOT</span> <span class="o">=</span> <span class="n">place</span><span class="p">;</span> <span class="k">break</span>
@@ -7905,16 +7930,15 @@ a.anchor-link {
     <span class="k">try</span><span class="p">:</span>
         <span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
         <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
-        <span class="n">DATA_ROOT</span> <span class="o">=</span> <span class="s1">'/content/drive/MyDrive/Taxonomic Project Data'</span>   <span class="c1"># change this to your folder</span>
+        <span class="n">DATA_ROOT</span> <span class="o">=</span> <span class="s1">'/content/drive/MyDrive/Taxonomic Project Data'</span>   <span class="c1"># change to your folder</span>
     <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
         <span class="n">DATA_ROOT</span> <span class="o">=</span> <span class="s1">'.'</span>
 
 <span class="n">BP</span>   <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_ROOT</span><span class="p">,</span> <span class="s1">'House1_Boyce_Park_2025'</span><span class="p">)</span>
 <span class="n">BASE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_ROOT</span><span class="p">,</span> <span class="s1">'Baseline_AllSamples_2025'</span><span class="p">)</span>
 <span class="n">ok</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BP</span><span class="p">,</span> <span class="s1">'feature-table.tsv'</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Our pond folder :'</span><span class="p">,</span> <span class="n">BP</span><span class="p">,</span> <span class="s1">'| found:'</span><span class="p">,</span> <span class="n">ok</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Shared folder   :'</span><span class="p">,</span> <span class="n">BASE</span><span class="p">,</span> <span class="s1">'| found:'</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE</span><span class="p">,</span> <span class="s1">'feature-table.tsv'</span><span class="p">)))</span>
-<span class="k">assert</span> <span class="n">ok</span><span class="p">,</span> <span class="s1">'Could not find the pond folder. Fix DATA_ROOT above so it points to your Drive folder.'</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Our pond folder:'</span><span class="p">,</span> <span class="n">BP</span><span class="p">,</span> <span class="s1">'| found:'</span><span class="p">,</span> <span class="n">ok</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">ok</span><span class="p">,</span> <span class="s1">'Could not find the pond folder. Set DATA_ROOT to your Drive folder.'</span>
 </pre></div>
 </div>
 </div>
@@ -7927,8 +7951,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Our pond folder : data\House1_Boyce_Park_2025 | found: True
-Shared folder   : data\Baseline_AllSamples_2025 | found: True
+<pre>Our pond folder: data\House1_Boyce_Park_2025 | found: True
 </pre>
 </div>
 </div>
@@ -7941,7 +7964,7 @@ Shared folder   : data\Baseline_AllSamples_2025 | found: True
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="A-few-helper-functions">A few helper functions<a class="anchor-link" href="#A-few-helper-functions">¶</a></h3><p>These just open the lab's files and hand us the numbers in an easy shape. Nothing clever is happening here.</p>
+<p>Small helpers that open the files. Nothing to see here.</p>
 </div>
 </div>
 </div>
@@ -7954,26 +7977,21 @@ Shared folder   : data\Baseline_AllSamples_2025 | found: True
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_table</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
-    <span class="c1"># the counts file: rows are microbes, columns are water samples, numbers are how many we saw</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s1">'feature-table.tsv'</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">'feature_id'</span><span class="p">})</span>
-    <span class="k">if</span> <span class="s1">'taxonomy'</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'taxonomy'</span><span class="p">])</span>
+    <span class="k">if</span> <span class="s1">'taxonomy'</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span> <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'taxonomy'</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'feature_id'</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">load_taxonomy</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
-    <span class="c1"># the lab's name for each microbe, plus how sure it was</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s1">'taxonomy.tsv'</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
     <span class="n">t</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'feature_id'</span><span class="p">,</span> <span class="s1">'taxon'</span><span class="p">,</span> <span class="s1">'confidence'</span><span class="p">][:</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">columns</span><span class="p">)]</span>
     <span class="k">return</span> <span class="n">t</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'feature_id'</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">load_mapping</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
-    <span class="c1"># which sample came from which spot</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s1">'mapping_file.txt'</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">m</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="s1">'SampleID'</span><span class="p">})</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'SampleID'</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">load_fasta</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
-    <span class="c1"># the actual DNA ID tags we can look up</span>
     <span class="n">seqs</span><span class="p">,</span> <span class="n">fid</span> <span class="o">=</span> <span class="p">{},</span> <span class="kc">None</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s1">'dna-sequences.fasta'</span><span class="p">)):</span>
         <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -7982,25 +8000,17 @@ Shared folder   : data\Baseline_AllSamples_2025 | found: True
     <span class="k">return</span> <span class="n">seqs</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">rank_of</span><span class="p">(</span><span class="n">taxon</span><span class="p">,</span> <span class="n">prefix</span><span class="p">):</span>
-    <span class="c1"># pull one level of the name out of the lab's label (like the group name or the genus)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">taxon</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span> <span class="k">return</span> <span class="kc">None</span>
     <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">taxon</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">';'</span><span class="p">):</span>
         <span class="n">part</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">part</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
-            <span class="n">v</span> <span class="o">=</span> <span class="n">part</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">prefix</span><span class="p">):]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-            <span class="k">return</span> <span class="n">v</span> <span class="ow">or</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">part</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span> <span class="k">return</span> <span class="n">part</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">prefix</span><span class="p">):]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="ow">or</span> <span class="kc">None</span>
     <span class="k">return</span> <span class="kc">None</span>
 
-<span class="c1"># open the files for our pond and for the shared set</span>
 <span class="n">bp</span>   <span class="o">=</span> <span class="n">load_table</span><span class="p">(</span><span class="n">BP</span><span class="p">);</span>   <span class="n">btax</span> <span class="o">=</span> <span class="n">load_taxonomy</span><span class="p">(</span><span class="n">BP</span><span class="p">);</span>   <span class="n">bmap</span> <span class="o">=</span> <span class="n">load_mapping</span><span class="p">(</span><span class="n">BP</span><span class="p">);</span>   <span class="n">bseq</span> <span class="o">=</span> <span class="n">load_fasta</span><span class="p">(</span><span class="n">BP</span><span class="p">)</span>
 <span class="n">base</span> <span class="o">=</span> <span class="n">load_table</span><span class="p">(</span><span class="n">BASE</span><span class="p">);</span> <span class="n">basetax</span> <span class="o">=</span> <span class="n">load_taxonomy</span><span class="p">(</span><span class="n">BASE</span><span class="p">);</span> <span class="n">basemap</span> <span class="o">=</span> <span class="n">load_mapping</span><span class="p">(</span><span class="n">BASE</span><span class="p">)</span>
-
-<span class="c1"># label each of our samples by its sampling spot (BP1, BP2, BP4, BP5)</span>
 <span class="n">bmap</span><span class="p">[</span><span class="s1">'spot'</span><span class="p">]</span> <span class="o">=</span> <span class="n">bmap</span><span class="p">[</span><span class="s1">'TreatmentGroup'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">tg</span><span class="p">:</span> <span class="s1">'BP'</span> <span class="o">+</span> <span class="n">tg</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">samples</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Our pond has'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">samples</span><span class="p">),</span> <span class="s1">'water samples and'</span><span class="p">,</span> <span class="n">bp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">'kinds of microbe.'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Total DNA reads:'</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">How many samples per spot:'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Our pond:'</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">samples</span><span class="p">),</span> <span class="s1">'samples,'</span><span class="p">,</span> <span class="n">bp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">'kinds of microbe,'</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()),</span> <span class="s1">'DNA reads.'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">bmap</span><span class="p">[</span><span class="s1">'spot'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -8014,10 +8024,7 @@ Shared folder   : data\Baseline_AllSamples_2025 | found: True
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Our pond has 10 water samples and 5818 kinds of microbe.
-Total DNA reads: 882619
-
-How many samples per spot:
+<pre>Our pond: 10 samples, 5818 kinds of microbe, 882619 DNA reads.
 spot
 BP2    3
 BP4    3
@@ -8035,8 +8042,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-1:-Identify-the-community-ourselves">Step 1: Identify the community ourselves<a class="anchor-link" href="#Step-1:-Identify-the-community-ourselves">¶</a></h2><p>We can't look up thousands of microbes by hand, so we sort them by how common they are and take the <strong>top 20</strong>. Those 20 make up about two thirds of everything in the pond, so they tell most of the story.</p>
-<p>For each of the 20 we take its DNA ID tag and run it through <strong>BLAST</strong>, a free online tool from the NIH. BLAST compares our tag to a giant library of known DNA and tells us the closest match. This is the same "search and score" idea we built by hand in the aligner project, just at full scale.</p>
+<h2 id="Step-1:-Name-the-microbes-ourselves">Step 1: Name the microbes ourselves<a class="anchor-link" href="#Step-1:-Name-the-microbes-ourselves">¶</a></h2><p>We take the <strong>20 most common microbes</strong> (about two thirds of the pond) and look up each one's DNA with <strong>BLAST</strong>, a free NIH tool that finds the closest known match. Same idea as our aligner, just bigger.</p>
 </div>
 </div>
 </div>
@@ -8048,20 +8054,17 @@ BP5    2
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># sort microbes by how common they are and take the top 20</span>
-<span class="n">totals</span> <span class="o">=</span> <span class="n">bp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">totals</span> <span class="o">=</span> <span class="n">bp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">top20_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">totals</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="n">grand</span> <span class="o">=</span> <span class="n">totals</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-
 <span class="n">top20</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
     <span class="s1">'feature_id'</span><span class="p">:</span> <span class="n">top20_ids</span><span class="p">,</span>
-    <span class="s1">'total_reads'</span><span class="p">:</span> <span class="n">totals</span><span class="p">[</span><span class="n">top20_ids</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
     <span class="s1">'percent_of_pond'</span><span class="p">:</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">totals</span><span class="p">[</span><span class="n">top20_ids</span><span class="p">]</span><span class="o">/</span><span class="n">grand</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
     <span class="s1">'lab_name'</span><span class="p">:</span> <span class="n">btax</span><span class="p">[</span><span class="s1">'taxon'</span><span class="p">]</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">top20_ids</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
     <span class="s1">'lab_confidence'</span><span class="p">:</span> <span class="n">btax</span><span class="p">[</span><span class="s1">'confidence'</span><span class="p">]</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">top20_ids</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
 <span class="p">})</span>
 <span class="n">top20</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">);</span> <span class="n">top20</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'rank'</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'The top 20 make up'</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">top20</span><span class="p">[</span><span class="s1">'percent_of_pond'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">1</span><span class="p">),</span> <span class="s1">'percent of the whole pond.'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'The top 20 are'</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">top20</span><span class="p">[</span><span class="s1">'percent_of_pond'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span><span class="mi">1</span><span class="p">),</span> <span class="s1">'percent of the pond.'</span><span class="p">)</span>
 <span class="n">top20</span><span class="p">[[</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'percent_of_pond'</span><span class="p">,</span><span class="s1">'lab_confidence'</span><span class="p">,</span><span class="s1">'lab_name'</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -8075,7 +8078,7 @@ BP5    2
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>The top 20 make up 66.1 percent of the whole pond.
+<pre>The top 20 are 66.1 percent of the pond.
 </pre>
 </div>
 </div>
@@ -8269,11 +8272,10 @@ BP5    2
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># save the 20 DNA tags to a file, which is what BLAST reads</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'top20.fasta'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">top20_ids</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'&gt;'</span> <span class="o">+</span> <span class="n">fid</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span> <span class="o">+</span> <span class="n">bseq</span><span class="p">[</span><span class="n">fid</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Saved 20 DNA tags to top20.fasta'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># save the 20 DNA tags to the file BLAST reads</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'top20.fasta'</span><span class="p">,</span><span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">top20_ids</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'&gt;'</span><span class="o">+</span><span class="n">fid</span><span class="o">+</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">+</span><span class="n">bseq</span><span class="p">[</span><span class="n">fid</span><span class="p">]</span><span class="o">+</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Saved 20 DNA tags.'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8286,7 +8288,7 @@ BP5    2
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Saved 20 DNA tags to top20.fasta
+<pre>Saved 20 DNA tags.
 </pre>
 </div>
 </div>
@@ -8299,7 +8301,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Running-BLAST:-saved-results,-or-live">Running BLAST: saved results, or live<a class="anchor-link" href="#Running-BLAST:-saved-results,-or-live">¶</a></h3><p>Looking up 20 tags online takes a while and the NIH server can be busy, so we <strong>saved our results right in this notebook</strong>. It loads them instantly. If you want to redo the lookups yourself, set <code>RUN_BLAST_LIVE = True</code> and the same code that made our saved results will run live.</p>
+<p>The lookups are slow online, so we <strong>saved the results inside this notebook</strong>. To redo them live, set <code>RUN_BLAST_LIVE = True</code>.</p>
 </div>
 </div>
 </div>
@@ -8311,7 +8313,7 @@ BP5    2
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">RUN_BLAST_LIVE</span> <span class="o">=</span> <span class="kc">False</span>   <span class="c1"># set to True to look the 20 tags up online again</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">RUN_BLAST_LIVE</span> <span class="o">=</span> <span class="kc">False</span>   <span class="c1"># True = look the 20 tags up online again</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">blast_top20</span><span class="p">():</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">Bio.Blast</span><span class="w"> </span><span class="kn">import</span> <span class="n">NCBIWWW</span><span class="p">,</span> <span class="n">NCBIXML</span>
@@ -8326,17 +8328,14 @@ BP5    2
                     <span class="nb">round</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">hsp</span><span class="o">.</span><span class="n">identities</span><span class="o">/</span><span class="n">hsp</span><span class="o">.</span><span class="n">align_length</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="s1">'</span><span class="si">%.1e</span><span class="s1">'</span><span class="o">%</span><span class="k">hsp</span>.expect)
         <span class="k">if</span> <span class="n">rec</span><span class="o">.</span><span class="n">alignments</span><span class="p">:</span>
             <span class="n">top</span> <span class="o">=</span> <span class="n">row</span><span class="p">(</span><span class="n">rec</span><span class="o">.</span><span class="n">alignments</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-            <span class="n">named</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">row</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">rec</span><span class="o">.</span><span class="n">alignments</span>
-                          <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">s</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">hit_def</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">skip</span><span class="p">)),</span> <span class="n">top</span><span class="p">)</span>
+            <span class="n">named</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">row</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">rec</span><span class="o">.</span><span class="n">alignments</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">s</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">hit_def</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">skip</span><span class="p">)),</span> <span class="n">top</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">top</span> <span class="o">=</span> <span class="p">(</span><span class="s1">''</span><span class="p">,</span><span class="s1">'no match'</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="s1">''</span><span class="p">);</span> <span class="n">named</span> <span class="o">=</span> <span class="n">top</span>
         <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="o">*</span><span class="n">top</span><span class="p">,</span> <span class="n">named</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">named</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">named</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">fid</span><span class="p">,</span> <span class="n">top</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">top</span><span class="p">[</span><span class="mi">1</span><span class="p">][:</span><span class="mi">45</span><span class="p">])</span>
-    <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rank'</span><span class="p">,</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'top_accession'</span><span class="p">,</span><span class="s1">'top_match'</span><span class="p">,</span><span class="s1">'top_percent_match'</span><span class="p">,</span><span class="s1">'top_evalue'</span><span class="p">,</span>
-            <span class="s1">'named_accession'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">,</span><span class="s1">'named_percent_match'</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">cols</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'rank'</span><span class="p">,</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'top_accession'</span><span class="p">,</span><span class="s1">'top_match'</span><span class="p">,</span><span class="s1">'top_percent_match'</span><span class="p">,</span>
+                                       <span class="s1">'top_evalue'</span><span class="p">,</span><span class="s1">'named_accession'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">,</span><span class="s1">'named_percent_match'</span><span class="p">])</span>
 
-<span class="c1"># our saved BLAST results:</span>
 <span class="n">CACHED_BLAST_TSV</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'''rank	feature_id	top_accession	top_hit_def	top_pident	top_evalue	top_bitscore	named_accession	named_hit_def	named_pident</span>
 <span class="s1">1	821495	JF817232	Uncultured bacterium clone Bac-1-78 16S ribosomal RNA gene, partial sequence	99.14	0.0e+00	837.7	KC677654	Ferrovum sp. PN-J174 16S ribosomal RNA gene, partial sequence	99.14</span>
 <span class="s1">2	4402734	KC683316	Uncultured bacterium clone F27 16S ribosomal RNA gene, partial sequence	99.32	0.0e+00	804.4	NC_024928	Eunotia naegelii chloroplast, complete genome	99.32</span>
@@ -8359,17 +8358,14 @@ BP5    2
 <span class="s1">19	169182	KX956779	Uncultured bacterium clone OTU2432 16S ribosomal RNA gene, partial sequence	99.57	0.0e+00	848.7	CP046022	Enterococcus faecalis strain BFF1B1 chromosome, complete genome	99.57</span>
 <span class="s1">20	150673	LT721355	Uncultured bacterium partial 16S rRNA gene, clone 108.1_1006040	99.77	0.0e+00	808.1	PV902520	Sphingomonas sp. strain A4e 16S ribosomal RNA gene, partial sequence	99.32</span>
 <span class="s1">'''</span>
-
 <span class="k">if</span> <span class="n">RUN_BLAST_LIVE</span><span class="p">:</span>
-    <span class="n">blast</span> <span class="o">=</span> <span class="n">blast_top20</span><span class="p">()</span>
-    <span class="n">blast</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'top20_blast_results.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">blast</span> <span class="o">=</span> <span class="n">blast_top20</span><span class="p">();</span> <span class="n">blast</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'top20_blast_results.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">blast</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">CACHED_BLAST_TSV</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
-<span class="c1"># use friendly column names no matter which way the results were made</span>
 <span class="n">blast</span> <span class="o">=</span> <span class="n">blast</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'top_hit_def'</span><span class="p">:</span><span class="s1">'top_match'</span><span class="p">,</span><span class="s1">'top_pident'</span><span class="p">:</span><span class="s1">'top_percent_match'</span><span class="p">,</span>
                               <span class="s1">'named_hit_def'</span><span class="p">:</span><span class="s1">'named_match'</span><span class="p">,</span><span class="s1">'named_pident'</span><span class="p">:</span><span class="s1">'named_percent_match'</span><span class="p">})</span>
-<span class="n">blast</span><span class="p">[</span><span class="s1">'feature_id'</span><span class="p">]</span> <span class="o">=</span> <span class="n">blast</span><span class="p">[</span><span class="s1">'feature_id'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>   <span class="c1"># make the IDs match the counts file</span>
-<span class="c1"># "top match" is the very closest DNA, "named match" is the closest one with a real organism name</span>
+<span class="n">blast</span><span class="p">[</span><span class="s1">'feature_id'</span><span class="p">]</span> <span class="o">=</span> <span class="n">blast</span><span class="p">[</span><span class="s1">'feature_id'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="c1"># "top match" = the very closest DNA; "named match" = the closest one with a real organism name</span>
 <span class="n">blast</span><span class="p">[[</span><span class="s1">'rank'</span><span class="p">,</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'top_percent_match'</span><span class="p">,</span><span class="s1">'top_match'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -8583,8 +8579,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-2:-Check-our-answers,-and-check-for-contamination">Step 2: Check our answers, and check for contamination<a class="anchor-link" href="#Step-2:-Check-our-answers,-and-check-for-contamination">¶</a></h2><p>Now we do two honesty checks.</p>
-<p>First, we put <strong>our BLAST names next to the lab's names</strong>. Where they agree, great. Where they differ, it is usually because BLAST could name the exact organism while the lab only got to a broad group. Our best example: the single most common microbe in the pond. The lab only labeled it a broad group ("Burkholderiales"), but our BLAST pins it to <strong>Ferrovum</strong>, an iron eating bacterium that is a classic sign of mine drainage.</p>
+<h2 id="Step-2:-Check-the-names,-and-check-for-contamination">Step 2: Check the names, and check for contamination<a class="anchor-link" href="#Step-2:-Check-the-names,-and-check-for-contamination">¶</a></h2><p>We put <strong>our BLAST names next to the lab's names</strong>. They mostly agree. Where they differ, BLAST usually names the exact organism the lab only guessed at a broad group for. Our best example: the number one microbe, which the lab called just "Burkholderiales" but BLAST names <strong>Ferrovum</strong>, a mine drainage iron eater.</p>
 </div>
 </div>
 </div>
@@ -8596,16 +8591,14 @@ BP5    2
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># put the lab name and our BLAST name side by side</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">genus</span><span class="p">(</span><span class="n">t</span><span class="p">):</span> <span class="k">return</span> <span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s1">'g__'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">genus</span><span class="p">(</span><span class="n">t</span><span class="p">):</span> <span class="k">return</span> <span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s1">'g__'</span><span class="p">)</span>
 <span class="n">recon</span> <span class="o">=</span> <span class="n">top20</span><span class="p">[[</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'percent_of_pond'</span><span class="p">,</span><span class="s1">'lab_confidence'</span><span class="p">,</span><span class="s1">'lab_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">recon</span><span class="p">[</span><span class="s1">'lab_genus'</span><span class="p">]</span> <span class="o">=</span> <span class="n">recon</span><span class="p">[</span><span class="s1">'lab_name'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">genus</span><span class="p">)</span>
-<span class="n">recon</span> <span class="o">=</span> <span class="n">recon</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">blast</span><span class="p">[[</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'top_percent_match'</span><span class="p">,</span><span class="s1">'top_match'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">,</span><span class="s1">'named_percent_match'</span><span class="p">]],</span>
-                    <span class="n">on</span><span class="o">=</span><span class="s1">'feature_id'</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
-    <span class="n">g</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'lab_genus'</span><span class="p">]</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span> <span class="k">return</span> <span class="s1">'lab gave no exact name'</span>
-    <span class="k">return</span> <span class="s1">'agree'</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'_'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'named_match'</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">else</span> <span class="s1">'BLAST names it more exactly'</span>
+<span class="n">recon</span> <span class="o">=</span> <span class="n">recon</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">blast</span><span class="p">[[</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'top_percent_match'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">,</span><span class="s1">'named_percent_match'</span><span class="p">]],</span> <span class="n">on</span><span class="o">=</span><span class="s1">'feature_id'</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="s1">'lab_genus'</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="nb">str</span><span class="p">):</span> <span class="k">return</span> <span class="s1">'lab gave no exact name'</span>
+    <span class="k">return</span> <span class="s1">'agree'</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'_'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s1">'named_match'</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">else</span> <span class="s1">'BLAST names it more exactly'</span>
 <span class="n">recon</span><span class="p">[</span><span class="s1">'comparison'</span><span class="p">]</span> <span class="o">=</span> <span class="n">recon</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">compare</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">recon</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">);</span> <span class="n">recon</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">'rank'</span>
 <span class="n">recon</span><span class="p">[[</span><span class="s1">'percent_of_pond'</span><span class="p">,</span><span class="s1">'lab_confidence'</span><span class="p">,</span><span class="s1">'lab_genus'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">,</span><span class="s1">'named_percent_match'</span><span class="p">,</span><span class="s1">'comparison'</span><span class="p">]]</span>
@@ -8851,7 +8844,7 @@ BP5    2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Check-the-clean-water-controls-for-contamination">Check the clean water controls for contamination<a class="anchor-link" href="#Check-the-clean-water-controls-for-contamination">¶</a></h3><p>When the lab runs samples, it also runs a few bottles of <strong>pure, clean water</strong> through the exact same machines. Nothing should show up in those. If something does, it sneaked in from handling, gloves, or the kit chemicals, and it is not really from the pond. Anything that is common in those clean water bottles gets flagged as contamination.</p>
+<p>The lab also runs bottles of <strong>pure water</strong>. Anything common in those got in from handling, not the pond, so we flag it as contamination.</p>
 </div>
 </div>
 </div>
@@ -8864,20 +8857,14 @@ BP5    2
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">controls</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">base</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">basemap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'TreatmentGroup'</span><span class="p">]</span><span class="o">==</span><span class="s1">'Water Control'</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Clean water control samples:'</span><span class="p">,</span> <span class="n">controls</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Reads in each control:'</span><span class="p">,</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span><span class="nb">int</span><span class="p">(</span><span class="n">base</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">controls</span><span class="p">})</span>
-
-<span class="c1"># for each of our top 20, how many reads showed up in the clean water controls?</span>
-<span class="n">ctrl_reads</span> <span class="o">=</span> <span class="p">{</span><span class="n">fid</span><span class="p">:(</span><span class="nb">int</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fid</span><span class="p">,</span><span class="n">controls</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="k">if</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">base</span><span class="o">.</span><span class="n">index</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">top20_ids</span><span class="p">}</span>
 <span class="n">ctrl_total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">base</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">controls</span><span class="p">)</span>
-
-<span class="n">trust</span> <span class="o">=</span> <span class="n">recon</span><span class="p">[[</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'percent_of_pond'</span><span class="p">,</span><span class="s1">'lab_genus'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">trust</span><span class="p">[</span><span class="s1">'reads_in_controls'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">ctrl_reads</span><span class="p">[</span><span class="n">f</span><span class="p">]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">top20_ids</span><span class="p">]</span>
-<span class="n">trust</span><span class="p">[</span><span class="s1">'percent_of_controls'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">trust</span><span class="p">[</span><span class="s1">'reads_in_controls'</span><span class="p">]</span><span class="o">/</span><span class="n">ctrl_total</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ctrl_reads</span> <span class="o">=</span> <span class="p">{</span><span class="n">fid</span><span class="p">:(</span><span class="nb">int</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">fid</span><span class="p">,</span><span class="n">controls</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="k">if</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">base</span><span class="o">.</span><span class="n">index</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">fid</span> <span class="ow">in</span> <span class="n">top20_ids</span><span class="p">}</span>
+<span class="n">trust</span> <span class="o">=</span> <span class="n">recon</span><span class="p">[[</span><span class="s1">'feature_id'</span><span class="p">,</span><span class="s1">'percent_of_pond'</span><span class="p">,</span><span class="s1">'named_match'</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">trust</span><span class="p">[</span><span class="s1">'percent_of_controls'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">ctrl_reads</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">/</span><span class="n">ctrl_total</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">top20_ids</span><span class="p">]</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">call</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s1">'percent_of_controls'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">1.0</span><span class="p">:</span> <span class="k">return</span> <span class="s1">'CONTAMINATION (also common in blanks)'</span>
+    <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s1">'percent_of_controls'</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">1.0</span><span class="p">:</span> <span class="k">return</span> <span class="s1">'CONTAMINATION'</span>
     <span class="k">if</span> <span class="n">r</span><span class="p">[</span><span class="s1">'percent_of_controls'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">:</span>  <span class="k">return</span> <span class="s1">'tiny bit in blanks'</span>
-    <span class="k">return</span> <span class="s1">'clean, trustworthy'</span>
+    <span class="k">return</span> <span class="s1">'clean, trusted'</span>
 <span class="n">trust</span><span class="p">[</span><span class="s1">'verdict'</span><span class="p">]</span> <span class="o">=</span> <span class="n">trust</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">trust</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">);</span> <span class="n">trust</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">'rank'</span>
 <span class="n">trust</span>
@@ -8890,14 +8877,6 @@ BP5    2
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Clean water control samples: ['C9SKTRC', 'C12TPTRC']
-Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
-</pre>
-</div>
-</div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
@@ -8921,16 +8900,12 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 <th></th>
 <th>feature_id</th>
 <th>percent_of_pond</th>
-<th>lab_genus</th>
 <th>named_match</th>
-<th>reads_in_controls</th>
 <th>percent_of_controls</th>
 <th>verdict</th>
 </tr>
 <tr>
 <th>rank</th>
-<th></th>
-<th></th>
 <th></th>
 <th></th>
 <th></th>
@@ -8943,9 +8918,7 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 <th>1</th>
 <td>821495</td>
 <td>34.34</td>
-<td>NaN</td>
 <td>Ferrovum sp. PN-J174 16S ribosomal RNA gene, partial sequence</td>
-<td>281</td>
 <td>0.18</td>
 <td>tiny bit in blanks</td>
 </tr>
@@ -8953,9 +8926,7 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 <th>2</th>
 <td>4402734</td>
 <td>10.75</td>
-<td>Chloroplast</td>
 <td>Eunotia naegelii chloroplast, complete genome</td>
-<td>719</td>
 <td>0.47</td>
 <td>tiny bit in blanks</td>
 </tr>
@@ -8963,179 +8934,143 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 <th>3</th>
 <td>550329</td>
 <td>5.86</td>
-<td>Chloroplast</td>
 <td>Cryptomonas curvata NIES-281 chloroplast DNA, complete genome</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>4</th>
 <td>4203120</td>
 <td>2.31</td>
-<td>uncultured</td>
 <td>Uncultured bacterium clone LRE22B39 16S ribosomal RNA gene, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>5</th>
 <td>4327233</td>
 <td>1.97</td>
-<td>NaN</td>
 <td>Curtobacterium citreum strain CvEBI-9 16S ribosomal RNA gene, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>6</th>
 <td>254922</td>
 <td>1.84</td>
-<td>Acidocella</td>
 <td>Acidocella aquatica strain Ok2G 16S ribosomal RNA, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>7</th>
 <td>1140775</td>
 <td>1.15</td>
-<td>uncultured</td>
 <td>Uncultured bacterium isolate DGGE gel band pta1A-70 16S ribosomal RNA gene, partial se...</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>8</th>
 <td>283765</td>
 <td>0.97</td>
-<td>Kocuria</td>
 <td>Kocuria sp. strain S1_16.1.3 16S ribosomal RNA gene, partial sequence</td>
-<td>14518</td>
 <td>9.41</td>
-<td>CONTAMINATION (also common in blanks)</td>
+<td>CONTAMINATION</td>
 </tr>
 <tr>
 <th>9</th>
 <td>13505</td>
 <td>0.94</td>
-<td>uncultured</td>
 <td>Uncultured Actinomycetales bacterium 16S ribosomal RNA (clone TM177)</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>10</th>
 <td>3538</td>
 <td>0.67</td>
-<td>Chloroplast</td>
 <td>Klebsormidium nitens strain MVSP plastid, complete genome</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>11</th>
 <td>219317</td>
 <td>0.62</td>
-<td>uncultured</td>
 <td>Uncultured bacterium clone ERF-C9 16S ribosomal RNA gene, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>12</th>
 <td>647790</td>
 <td>0.61</td>
-<td>Roseiarcus</td>
 <td>Uncultured alpha proteobacterium clone SI-1M_F10 16S ribosomal RNA gene, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>13</th>
 <td>1113279</td>
 <td>0.61</td>
-<td>Acidiphilium</td>
 <td>Acidiphilium rubrum strain Colony12 16S ribosomal RNA gene, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>14</th>
 <td>683891</td>
 <td>0.60</td>
-<td>Pseudorhodobacter</td>
 <td>Uncultured bacterium clone MD10h7_267 16S ribosomal RNA gene, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>15</th>
 <td>4203118</td>
 <td>0.57</td>
-<td>Acetobacteraceae</td>
 <td>Uncultured bacterium clone CAMD_CTRL_B1B6 16S ribosomal RNA gene, partial sequence</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>16</th>
 <td>1047041</td>
 <td>0.56</td>
-<td>Lawsonella</td>
 <td>Uncultured bacterium clone nbw1079b05c1 16S ribosomal RNA gene, partial sequence</td>
-<td>3233</td>
 <td>2.10</td>
-<td>CONTAMINATION (also common in blanks)</td>
+<td>CONTAMINATION</td>
 </tr>
 <tr>
 <th>17</th>
 <td>1121839</td>
 <td>0.49</td>
-<td>Rhodoblastus</td>
 <td>Uncultured bacterium partial 16S rRNA gene, clone BProP8A06</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>18</th>
 <td>4453684</td>
 <td>0.47</td>
-<td>WD260</td>
 <td>Uncultured bacterium partial 16S rRNA gene, clone Central-Bottom-cDNA_clone5</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>19</th>
 <td>169182</td>
 <td>0.41</td>
-<td>NaN</td>
 <td>Enterococcus faecalis strain BFF1B1 chromosome, complete genome</td>
-<td>0</td>
 <td>0.00</td>
-<td>clean, trustworthy</td>
+<td>clean, trusted</td>
 </tr>
 <tr>
 <th>20</th>
 <td>150673</td>
 <td>0.40</td>
-<td>Sphingomonas</td>
 <td>Sphingomonas sp. strain A4e 16S ribosomal RNA gene, partial sequence</td>
-<td>981</td>
 <td>0.64</td>
 <td>tiny bit in blanks</td>
 </tr>
@@ -9154,15 +9089,14 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># what is common in the clean water controls? (skin and kit bacteria should show up)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># what is common in the clean water controls? (skin/kit bacteria show up here)</span>
 <span class="n">btx</span> <span class="o">=</span> <span class="n">basetax</span><span class="p">[</span><span class="s1">'taxon'</span><span class="p">]</span>
 <span class="n">best</span> <span class="o">=</span> <span class="n">btx</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="s1">'g__'</span><span class="p">)</span> <span class="ow">or</span> <span class="p">((</span><span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="s1">'f__'</span><span class="p">)</span><span class="o">+</span><span class="s1">' (family)'</span><span class="p">)</span> <span class="k">if</span> <span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="s1">'f__'</span><span class="p">)</span> <span class="k">else</span> <span class="s1">'unnamed'</span><span class="p">))</span>
 <span class="n">crel</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="n">controls</span><span class="p">]</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">base</span><span class="p">[</span><span class="n">controls</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">ctrl_taxa</span> <span class="o">=</span> <span class="n">crel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">best</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">ctrl_taxa</span><span class="o">*</span><span class="mi">100</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mf">4.5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#b03a2e'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="p">(</span><span class="n">ctrl_taxa</span><span class="o">*</span><span class="mi">100</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mf">4.5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#b03a2e'</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'average share of the clean water controls (%)'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'What showed up in the clean water controls'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'What showed up in the clean water controls'</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -9187,8 +9121,7 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-3:-What-actually-lives-in-the-pond">Step 3: What actually lives in the pond<a class="anchor-link" href="#Step-3:-What-actually-lives-in-the-pond">¶</a></h2><p>Now we add up the counts to see the makeup of the community. The first chart groups microbes into big families and shows how that mix changes across our four sampling spots. The second chart shows the most common individual types overall.</p>
-<p>We use <strong>shares (percentages)</strong> instead of raw counts so that samples with more total reads do not look bigger just because more DNA was read.</p>
+<h2 id="Step-3:-What-lives-in-the-pond">Step 3: What lives in the pond<a class="anchor-link" href="#Step-3:-What-lives-in-the-pond">¶</a></h2><p>Two charts: what lives at each of our four sampling spots, and the most common types overall. We use <strong>shares (percentages)</strong> so a sample is not bigger just because more of its DNA was read.</p>
 </div>
 </div>
 </div>
@@ -9200,20 +9133,14 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># turn counts into shares within each sample</span>
-<span class="n">rel</span> <span class="o">=</span> <span class="n">bp</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">rel</span> <span class="o">=</span> <span class="n">bp</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">phy</span> <span class="o">=</span> <span class="n">btax</span><span class="p">[</span><span class="s1">'taxon'</span><span class="p">]</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="s1">'p__'</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">'unnamed'</span><span class="p">)</span>
 <span class="n">phy_by_sample</span> <span class="o">=</span> <span class="n">rel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">phy</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">phy_mean</span> <span class="o">=</span> <span class="n">phy_by_sample</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Biggest families across the whole pond (average share, %):'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">((</span><span class="n">phy_mean</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
-
 <span class="n">spot_order</span><span class="o">=</span><span class="p">[</span><span class="s1">'BP1'</span><span class="p">,</span><span class="s1">'BP2'</span><span class="p">,</span><span class="s1">'BP4'</span><span class="p">,</span><span class="s1">'BP5'</span><span class="p">]</span>
-<span class="n">phy_spot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">sp</span><span class="p">:</span> <span class="n">phy_by_sample</span><span class="p">[[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">samples</span> <span class="k">if</span> <span class="n">bmap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'spot'</span><span class="p">]</span><span class="o">==</span><span class="n">sp</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-                         <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">spot_order</span><span class="p">})</span>
+<span class="n">phy_spot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">sp</span><span class="p">:</span> <span class="n">phy_by_sample</span><span class="p">[[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">samples</span> <span class="k">if</span> <span class="n">bmap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'spot'</span><span class="p">]</span><span class="o">==</span><span class="n">sp</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">spot_order</span><span class="p">})</span>
 <span class="n">topP</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">phy_mean</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="n">plot_df</span> <span class="o">=</span> <span class="n">phy_spot</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">topP</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="n">plot_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">'everything else'</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">plot_df</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">lower</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
 <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span> <span class="n">bottom</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">spot_order</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">plot_df</span><span class="o">.</span><span class="n">index</span><span class="p">):</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">spot_order</span><span class="p">,</span> <span class="n">plot_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="n">bottom</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">tab20</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">plot_df</span><span class="p">))))</span>
@@ -9232,21 +9159,6 @@ Reads in each control: {'C9SKTRC': 87829, 'C12TPTRC': 66423}
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Biggest families across the whole pond (average share, %):
-Proteobacteria      51.6
-Cyanobacteria       20.0
-Actinobacteriota    14.5
-Acidobacteriota      3.3
-Patescibacteria      3.1
-Bacteroidota         2.3
-Planctomycetota      0.8
-Chloroflexi          0.8
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="No description has been provided for this image" class="" src="data:image/png;base64,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UVa8eHHLly+f3XfffW4qXp+zZ89a586d3bqaNWvamjVr3PJt27a5Y+l2ySWXWI8ePezChQvxtql58+a2fPly97hKlSpuu/fff9/KlStnOXLksOuuu87WrVvnL1/Q8bp27eqO/cUXX8R4TXG1O/pxEmprMBHAAgAAmNnixYsta9asVqNGDXcJfeLEif7z8uOPP9qAAQNswoQJdurUKYuIiLAyZcpEOW/z5s1zAfAPP/zgtl+06H9jis+fP9/GjBnjgtpNmzbZwYMH7emnn/av/+2336xRo0a2c+dOa9++vbtJqVKl3LF0W79+ve3evdtmzJgRb5vmzp3rglI9ViC8ZMkS91rUBh33wQcfdAGrz++//2433nij/fPPP9a6desorym+dkc/TnxtDTYCWAAAADN79913XeAqt9xyiwtA9+3b5x7PmTPHBX3qlKVsZ2wU7GmbChUqWOHCha1///7+dd98843btzKVyk4qCNQyH2VsO3ToYDlz5rS+ffvarl273LFPnjzpgtkCBQq4zO6sWbP82dNA2iSzZ8+2hQsXWsmSJe3iiy92WdSVK1f61yvb3K5dO8ucOXOM5ybU7sjia2uwEcACAIB0T8HX9OnT7dFHH3WXwHWp/cCBA+7SuyirqOWJoefEdj+2/UXft2/7N99807Xtjz/+cDW5AwcOdOUG8bUptn098cQT/uyobsePH/evz5UrV0CvIfoxox8nvrYGGwEsAABI93Spu1atWlGCvK+//tpfRqBL6++8844rM4irc1fTpk3d5fwNGzbY3r17beTIkf51ukSv8gJdaldgPGzYMLe9z8aNG12wrMDylVdecTWnymL++++/rqxBmVllTVXz6hNXm/LkyeOO7wtS27RpY2+//bZ99913iQ4o42t39OPE19ZgI4AFAADpnsoH7r333ijnQYHa4cOHbdmyZe4y/fDhw61jx46WJUsWf4ep6MGe1jdo0MDd1Fkq8r4eeeQR1/FJdaoK/tThy0d1twowNYSXRkDQTR544AH766+/XElCz5497YYbbvA/J642lS5d2urXr2+FChVyl/51/7XXXrPevXu7zLK2ixw8xye+dkc/TnxtDbYMEdFzw+mUetTpTTly5Ijlzp07aPt9vfuCoO0LMfV6s3FITstPE17ndIdYgy69QrLfUk/MCcl+8T/bRrQKyemoOrkqpznEVndcHRa/O9XhaOvWrXb55Ze7mkwgsT8XZGABAADgKQSwAAAA8BQCWAAAAHgKASwAAAA8hQAWAAAAnhL3tA0IisYLQ9PTGj6hmeEDAACELwJYIBYrfqnIeQmxBl04xQCApCGADbF2AznFoRTcEQ0BAAhPmqZVU762b98+tZsSFjwRXR07dsyWLFlihw4dshIlSljdunVjzL977tw5++GHH9yUZlWrVrXKlSunWnsBAED4TP4T6KQ3mknr5MmTljlzZjfrVP/+/a1cuXLxPkdTtGr61A4dOliw+aax7dy5s23bts3y5s0btH2/ncx2R25bagj7APabb76xdu3auR+gUqVKufl+CxQoYPPnz7dLLrnEbXPw4EE3XZn+11Rm33//vTuho0ePTu3mAwAAj1CMMWHCBDcV6scff2xNmjRxU7Mq0IvL9u3bQzabWKDTvSZFctsdyraliVEIBgwYYC1btrSff/7ZPvroI/vjjz/s77//ttdf/99Un08++aT9+++/tnr1aps9e7YLeseOHWtff/11qrYdAAB4S82aNa1Ro0b22muv2f79+10Aq2D2mmuusYYNG1rHjh1t5cqVblvFHe+9957LZmq9/hfFK7fffrvddNNN9u677/r3vWHDBuvUqZPbj7b/9ttv/ev0nDvuuMOuvfZaf1ZUyTrdfJQd7tevn7Vq1SpKHBRX++Lad2LbrfIFbfP444+7LHX0tiV0/HSZgT1//rwVLVrU/zhnzpxuvuULFy64xxERETZt2jQbPHiwWyd16tRxt6lTp1qzZs1Sre3wLkaPSAmMIAEgfK1fv95Onz7trvY2aNDAihQp4mKPdevW2a233uoSaiVLlrTrr7/efyleZY4K9JRM6969u9t+2LBhbv0999xj999/v7Vp08ZdJc6YMaNVqFDBHWv8+PE2cuRIGzp0qNtHjhw53PIdO3ZEadO4cePc/q699loXTCqD2qVLlzjbp+PGtu/EtlvlC8pMa5mC2+hti+/46TaAVSb1gQcesEyZMrkTruzqZZddZo888ohbv3PnTjty5EiMmleVEvz2229x7lc/lLr5HD16NISvAgAAeMFdd93lYo61a9fawIEDXTmBMrGzZs1ymcUTJ07YP//8Y1u2bLFKlSpZ8eLFXSCpDKS89dZbLvn2wgsvuMcHDhxwsYsCwYsuusgOHz5sWbJksdq1a7vHouBR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ZOCiiy5yHZZie54u/WukAI0SoDIFdXDSSAeiAFD1oVqmLKl68efIkcO+/vprlzlV0Bfb/nPmzOkyrJGzorqsH338WgWmkTuixdUWLddVdXXUV02rln/44Yf+5wXazujbqrNWXOcs5J24fJH8E088YT169HARtobOGjp0qBsnTRTFq1ebiom9hk5cHkUnLs+iE5d30YnLu8K9ExeC5/jx4y4I1dXyt99+241cEO4S83ORqAysMqzq8aZaV/U6U++xfv36Wd68ed0P8GOPPRajRxkAAABS1pEjR9xoBA899JAngteQduLSBAWffvqpK+7VGGMaWksD3apuQtQLLlOmZPcLAwAAQDIUK1bMlQekVUnqxKV6Cg1Yq8BVQzmonkE99gheAQAAEGqJTpdq3C8V/srDDz/sinY1yK1mnRg+fLjlypUrFO0EAAAAEp+B1TSxqn9VbzPd1NNNPcyUjdWctpqPV9OWAQAAAGGRgR0xYoSbvqx8+fLusUYbUBDbp08f/2gEysZqGAoAAAAg1TOwKg/YtGmT/7EC2MjjpVWpUsXN/wsAAJDW7N27N851GtQ/VP7991+3f900dBkSmYF944033KwNGuhWzpw5Y++//36UbeKaQg0AAMALzp8/78ZR1RChkccoLVmypPs/rpGaEjG0fsCeffZZV8KpCQMUyN5xxx32zjvvJHl/J0+edK/P632WEhXANm/e3Hbu3Gnr1693j1VKkC1btlC1DQAApCMqUwyFQMdBVXbzkUcesenTp7uEnIK8xx9/3HVaTw0KiEePHu1mQlUwrVmtNFNWcnzwwQcultP0sl4WcLr077//dv9rZgR11tItruDVty0AAIBX3HrrrbZv3z5XInns2DFbsWKFbdu2zWU+Izt9+rSdO3cuwf2dOHEizjKEs2fPRlmv/UXP7mqsfV311vGVEY4ryD0ebZ2GN9VV8siTGvi2ad++vfXv39+8LuAAVgGrXvDmzZvj3EaZWc3GVa1atWC1DwAAIOR+/fVXN+PolClT3CQAUqhQIXv11Vcte/bs/u0effRRt14Z0alTp8a6L13i1+hMhQsXtiuvvNINQRq5DEEZXe1DU7xeuHDBevTo4fZXoEABu+mmm1zAqSC5YcOGduDAAReDjRkzJsZxnnnmGfecyy67zPVD8h3ntddesw4dOrj7yt6qDcq6imZMfeqppyzdBLC//fabi+grVarkbqqF1TSyClgVzZcrV86doP3797thtQAAALxCwV/FihUtb968cW6joFIxkGIdDSf65JNPxthGiT4l/H744QeX9bz77rvt/vvvj7IPlWAqptIoTu+9954LnBVgHjx40G3z/PPPW9asWW3t2rVWsGBB13lr0KBBUY4zY8YMF3RrOFMlEBUE+0odVDerTO/rr7/ujj9kyBD32tKSgGtg9ZfC5MmT3WQFOmmazEAjDmTIkMFF/ppr9/bbb3dFzAAAAF6i2UQVXCa0TZcuXdx9DSP6119/xVrHe/3117uMqCjR9/TTT7syAMVMqq198MEH/durprVTp06WP39+91g1uNGD1dh88803LharV6+ef9mll17q/r/oootcdljJxVatWrn9W3qfiato0aIuwk+tgmYAAIBgq1Onjqs53b59u7vMHxsFhpFHW4pt1AFfzaqPr65Vwa96/2fOnNnd4tpeowQo+5qQzJkzu3IGlRHE5ttvv3VJxVWrVrlaW41ikJYw5hUAAEj3ypYt60oiNRnTl19+aX/++afNmzfPmjZtGmtnrLg0atTIX0urcgJlVJs1axYlaI1Mxxs3bpwrOVi5cqW73B/IhFB33nmnq3X99NNPXZ2rygwOHz7s1ikQHzhwoMvStm3b1pUXpDUEsAAAAGauU5XqVVVD2rhxY9eBa/DgwS57qcv/vkv0PpEfq8OWr+PX559/7vbVokULN7rAxIkT3brY9qFtVDKgQPeee+5xj3XfBWkZM7r9+Wj0J9/YtNdee629++67rnOXhgnzdbbX8XSVfOzYsS6TrJlSFdzOnDnTPU+vJXfu3J5/vzNEhGLUXQ/S2G/6oVDPv6C+sc/+bxBkhMCzR0JyWqtOrhqS/eJ/VndcHZLTUeqJOZzmENs2olVI9svnznufu6T+7tRl9a1bt9rll1/uhucEEvtzQQYWAAAAnpKkALZdu3Y2d+5cN3YZAAAAEPYBrHrRaaBd1VaoNmTLli3BbxkAAAAQrAD2k08+sd27d1vfvn1t1qxZrueexjx7//33Y0y3BgAAAARTkmtgL7nkEjf+mMYX03ARFSpUsK5du7redd27d7d169YFtaEAAABAUDpxaaqy77//3t00PISGf9i4caObgSK2eXsBAACAFJ2JSzTGmAb51bhmc+bMcXP6alq0++67zwoUKOC20eC5d9xxh38sMwAA4rN66w5OEIDQBbCXXXaZHT9+3M0CsWjRoijz8PrccMMNjO0GAACQRKdPn7Yrr7zSzawVDkqVKmXbtm0zzwawvXv3dpnVXLlyxVinadPKlCnj7mvmBwAAgEBs3vxKSE5UmTJ9PfEGaJQnXdVWLCWaa2r79u1hE1Buj6ctnqiBfeqpp2INXkUjEgAAACBxFLAmJiBduHBhuj3FQZ2J68SJE5Y9e/Zg7hIAACBFrF+/3m6//XarXLmytWnTxo20JMOHD7dXX33Vv93hw4etWrVqburT+J6nEgBlVKdMmWL169e3cePG2ciRI23UqFH+fR08eNBq1qzptu3YsaPLwiqzqpvuy7Rp01y55nXXXWfLli3zP7dRo0ZRjhPXdt99951b1qBBA7eN2pnYcxCZ2jVgwACrWrWqa2eTJk0S9fwULyHo169frPdFs3L9/vvvVqNGjeC1DgAAIAUcOXLE9e0ZOnSoGxp0+fLldvPNN9umTZvcCEuahVTDh8qHH37oAtiLL7443ucpo6qRmdRf6J133rFixYrZ/v37rWnTpm5fGTNmtEmTJtm1115rWbNmtZdeesk++ugjf2b1oosucsGp7/nqIK9O8ytWrIhyST/6cSJv988//9htt91mY8eOdfW0zz77bJylAPG9FrXFRx34Fy9ebB988IHlzp3bMmfOnKjnp3gAu2bNmljvixqvobN8by4AAIBXLFiwwNWePvzww/5lf/31lwv2qlev7q4wK2hTJlVBp7KyCT2vaNGi7vErr7xiOXPmdPfz5MljlSpVsrlz51rLli1dwPn555+7dYULF3b/K6spyvAqyNXzFSwrKHz88cdjbX9c2ykYVvb13nvvdY+VAVYgm9hzcMUVV/iXFSxY0Hbu3Gnz5893WWBf8jLQ56d4AKuTLToJSocDAACkBSqDrFu3rk2YMCHKcmVNRZf3J0+ebPny5XNZTc1AmtDzdKldmVVf8OrTq1cve+uttyxbtmx2+eWXx9t/SAlCBaWiLKavrCDQ7RQERz5+XH2YAjkHPipTUBZa2eIOHTq4ya2+/fbbgJ+faqMQELwCAIC0RPWhGmVJmUVd0o9OyTtlThUkKpjV5E0JPS+uYFMlCX379rXnnnvOnnjiCf/yTJkyWZYsWezo0aPu0nwwXH311a7sc8eOHVaiRAl78803k3wOIlMmWjcFrQpQFdQn5vkpFsD26dPH/T969Gj//bhoGwAAAK9QJlSZQ9VwasImlQzkz5/ffvvtN/9lcwVsr7/+uqvpDPR5sVHw+8ADD9jbb79tN954Y5R199xzjws08+bNa2vXrk3266pQoYKL29TJS0GxOlblyJEjSefARxNZKfj2dUJTQF+kSBH3OLHnIuQBrG9Msuj3AQAA0sJ4rerspJuyiSdPnozR8ei9995z2dHixYsH9DyVD8Q1CcGuXbtcragvk+ujmtiXX37ZdYhSABj9+Vu2bPHf37p1a5zHibzdk08+6TK+6nCvoFnZ2KScA9/xNMpA48aNXd2tAnuVQgR6DlM8gP3iiy9ivQ8AAJCWFCpUKNbl6oClW6DPU3BasmTJGIGlLrVr22HDhsW6H9XZ6ibRnx/5can/dvaK7TiRH3fp0sXVqCooVkexjz/+OM7XENdriXw8ZXITKnGI6xymag0sAAAAEk/lAb/88osboSBU2cnoNGKCsqHqwFWgQAFLC5IUwKooWR25fvrpJ1f7EN2MGTOC0TYAAIA0RaMFRC9BCLVCIc6GeiaA1VivGgNNveg0dAIAAAAQ1gGsxv7S4LUamgEAACAp1KkI8NGMYiENYNXrTGOhAQAAJJbGOlUssXv3bteLXY+j98ZH+gte9+3b534OfFPTBj2A1Ry+mvasffv2SXk6AABIxxS8aszRv//+2wWxgCh4veyyywLq3JakAFZTknXq1MlmzZplZcqUifFX0/PPP2/BpqhcncY0Jprm9PVNl+ajAXN/+OEH27t3r1WtWtUqV64c9DYAAIDgUNZVPfL1+zuuGauQvmTOnDngkRmSFMBqsFyNYaZgUbdQGzVqlD399NN2zTXXuABW064pA+zrxaeREG644Qb3f5UqVez777+3zp07MyMYAABhzHe5OJBLxkCyA9iFCxdaSvn000/t8ccft3nz5rlZH0RTuJ09ezbKDBP//vuvrV692mWHf/75Z6tXr54bJaFZs2Yp1lYAAACEXkYLcyNGjLBbb73VH7xK2bJl7YorrvAX/U6bNs1lXBW8Sp06ddxt6tSpqdZuAAAAhFEGtnv37vGuf/PNNy0YlFVdvny5PfDAA65sYcWKFW7mirp16/ovN+zcudNNjRa95lWlBL/99luc+z59+rS7+WhuYwAAAKTRAHb//v0xxnHTZf01a9ZYy5Ytg9U2O3DggNv37Nmz7aWXXrIaNWq4oDRTpkw2d+5cNyevglfJmzdvlOfmz5/fvy6uadWGDBkStLYCAAAgjAPYuKaKffbZZ+3w4cMWLL6RBrZv3+6C46xZs7ra1/r161vfvn1dfWy2bNncNidOnIjy3GPHjvnXxWbgwIFuH5EzsCk9tRsAAABSuQb2kUcecUFlsGia2nz58rmOWApeRaUDzZs3t99//9091hAcWrZt27Yoz9Xj0qVLx7lv7S937txRbgAAAEhnAazGalXmM5huuukml32NTI9VPuAbR05DaH300Uf+9Rraa8GCBda6deugtgUAAAAeLSEYPXp0jGWHDh2yKVOmBLUGVp577jnXaUuzfmnsWQ2R9fXXX9v8+fP927z44otuXbt27dy27777rlWvXt06duwY1LYAAADAowHsO++8E2OZLvXfeeedrrY0mFQioNEHJkyYYKtWrbLy5cvb+vXr3fLIIw6sXLnSJk6c6EYr6Natm3Xt2pWBkQEAANKgJAWw0S/ph1qhQoUSDIxVUqBsLQAAANK2sJ/IAAAAAEh2BlY2btxoS5YscbWv0fXp0yepuwUAAACCH8COHz/eevfubUWKFIkxgYAQwAIAACCsAtihQ4fa1KlTXactAAAAIOxrYDVFK2OsAgAAwDMBbJMmTdxYrAAAAIAnSgjGjRtnderUsVmzZrnpWjNkyBBl/eDBg4PVPgAAACD5AezYsWNtz549tnTpUjepQHQEsAAAAAirAFazYin72qZNm+C3CAAAAAh2DWymTJmscePGSXkqAAAAkPIBbL169VwGFgAAAPBECUH+/PmtQ4cONnPmTCtTpkyMTlzPP/98sNoHAAAAJD+A3bZtmzVo0MD27t3rbgAAAEBYB7ALFy4MfksAAACAUNXAAgAAAJ7KwMrGjRttyZIldujQoRjr+vTpk9x2AQAAAMELYMePH2+9e/e2IkWKWN68eWOsJ4AFAABAWAWwQ4cOtalTp9qdd94Z/BYBAAAAwa6BPXLkiLVu3TopTwUAAABSPoBt0qSJff3118k7MgAAAJBSJQTjxo2zOnXquNm4SpcuHWMig8GDBydltwAAAEBoAtixY8fanj17bOnSpbZ+/foY6wlgAQAAEFYB7IQJE1z2tU2bNsFvEQAAABDsGthMmTJZ48aNk/JUAAAAIOUD2Hr16rkMLAAAAOCJEoL8+fNbhw4dbObMmVamTJkYnbief/75YLUPAAAASH4Au23bNmvQoIHt3bvX3QAAAICwDmAXLlwY/JYAAAAAoaqBBQAAADyVgZUdO3a48WDXrVtnERERVqlSJXv44YetRIkSwW0hAAAAkNwMrEoIypcv76aTLVKkiBUrVszd1zLKCwAAABB2GdgBAwZYv379bOjQoVGWP/XUU27dsmXLgtU+IFWs3rqDMw8AQFrKwK5cudL69u0bY7mWrVq1KhjtAgAAAIIXwObNm9e2bNkSY/mmTZvcOgAAACCsAtj27dtbu3btbNq0afbnn3+624cffuiW3XPPPcFvJQAAAJCcGtjhw4e7/zt27Ghnzpxx97NkyWK9evWyESNGJGWXAAAAQOgC2KxZs9orr7ziOnFt3rzZTSVbunRpy5EjR1J2BwAAAIR+HFhRwFqtWrXk7AIAAAAIfQ3s4sWLXblAdFq2ZMmSpOwSAAAACF0A++ijj7r61+i07LHHHkvKLgEAAIDQjgNbsWLFGMu1bMWKFUnZJQAAABC6APayyy6zRYsWxViuaWQ1tSwAAAAQVgHsgw8+aF26dLGJEye6UQg0gcGECRPcMq0DAAAAwmoUgn79+tmBAwesZ8+edvr0af/QWo888oj1798/2G0EAAAAkhfAZsyY0V588UUbPHiw/fHHH24c2EqVKlnOnDmTsjsAAAAgZcaBzZUrl9WpUyc5uwAAAABCXwMLAAAApBYCWAAAAHgKASwAAAA8hQAWAAAA6SOAnTFjhrVo0cLKly/vXzZ8+HDbt29fsNoGAAAABCeA1QQG3bt3t9q1a9vGjRujjEqgIBYAAAAIqwB25MiRLgP73HPPRVneunVrmzZtWrDaBgAAAARnHNg///zTP/6rJjHwyZcvn5uhC/C6UqempnYT0rxtqd0AAED6ysAWLVrUzcAVPYCdO3eulS5dOnitAwAAAIIRwHbr1s06d+5sCxcudAHshg0bbMyYMW55jx49krJLAAAAIHQlBAMGDLCjR49ay5Yt7fz581ahQgXLmjWr9evXz3r37p2UXQIAAAChC2CVdR02bJgNGjTI1q5daxcuXLBKlSq5UQgAAACAsAtgfbJnz+6G0gIAAADCOoBV2cCUKVPsp59+soMHD8ZYryG2AAAAgLAJYB999FGbNGmSm4nrkksuCX6rAAAAgGAGsB9++KHNnz/frr766qQ8HQAAAEjZYbQyZszoOm0BAAAAnghgmzZtap9//nnwWwMAAAAEq4Rg8ODB/vs5c+a0Tp062axZs6xMmTJRZuOS559/PtDdAgAAAKEJYH/88ccojxs0aGB79+51NwAAACDsAlhNG+uzefNml3mNjdYBAAAAYVUDW7Zs2SStAwAAAFIlgI3LiRMn3OxcAAAAQFiMA9uvX79Y78uFCxfs999/txo1agSvdQAAAEByAtg1a9bEel8yZ85sVapUcbN0AQAAAGERwM6dO9f9f++999qUKVNC1SYAAAAguDWwBK8AAADwRAY2te3atcsN51WxYkWrWbNmlHXnz5+3xYsXu3Fpq1atauXLl0+1dgIAAMAjoxCE0rlz5+z222+3rl272vvvvx9l3aFDh6xevXrWvn17mzBhgtWqVStGJzMAAACkswzsihUrrHr16pZaBg0aZOXKlbNTp07Fuu7o0aO2du1ay5Url8vEXnPNNdasWTO74YYbUqW9AAAASOUMbOThsSpUqGApad68eTZjxgwbN25cjHURERH24YcfWpcuXVzwKvXr17err77aPvjggxRtJwAAAMIoA5snTx77+++/rUiRIrZhwwZLKappvf/++2369OmWO3fuGOt37txphw8fdkN4RaY62N9++y3O/Z4+fdrdfJTBBQAAQBoKYG+66Sa78sor7YorrnCP69atG+e2S5cuDUrjlF297777XHa1QYMGsW5z5MgR93++fPmiLM+fP79/XWyGDx9uQ4YMCUo7AQAAEIYB7MSJE23mzJm2efNmW7ZsmbVu3Tq0LTNzpQE61j333OMfuksdttavX+8eq9NWtmzZ3PLjx49Hee6xY8f862IzcOBA69u3b5QMbPHixUP2WgAAAJDCAWymTJncKAC+DOvgwYMt1AoWLOgC5fnz50cJTLdv3+4mVVBgq6BTs4BpWWR67MsWxyZr1qzuBgAAgHQwDqwysSlBIwhEH0VAIyE0atTIRo8e7R4rCG3SpImrkVWpgezbt88WLFhgY8aMSZF2AgAAwAMTGezYscPGjh1r69atc7WqlSpVsocffthKlChhKe3FF190NbJ33323Gw9W5Q7q1NWpU6cUbwsAAADCcCIDzYalma6+/vprNypBsWLF3H0t07pQatWqlZuoIDJ1LtM4tZdffrmtXLnSBa7ff/+9ZcmSJaRtAQAA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"/>
 </div>
@@ -9261,13 +9173,11 @@ Chloroflexi          0.8
 <div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># the most common individual types overall</span>
-<span class="n">fam</span> <span class="o">=</span> <span class="n">btax</span><span class="p">[</span><span class="s1">'taxon'</span><span class="p">]</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">fam</span> <span class="o">=</span> <span class="n">btax</span><span class="p">[</span><span class="s1">'taxon'</span><span class="p">]</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">bp</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="n">bestg</span> <span class="o">=</span> <span class="n">fam</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="s1">'g__'</span><span class="p">)</span> <span class="ow">or</span> <span class="p">((</span><span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="s1">'f__'</span><span class="p">)</span><span class="o">+</span><span class="s1">' (family)'</span><span class="p">)</span> <span class="k">if</span> <span class="n">rank_of</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="s1">'f__'</span><span class="p">)</span> <span class="k">else</span> <span class="s1">'unnamed'</span><span class="p">))</span>
 <span class="n">gen_mean</span> <span class="o">=</span> <span class="n">rel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">bestg</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">=</span><span class="p">(</span><span class="n">gen_mean</span><span class="o">*</span><span class="mi">100</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span><span class="mf">5.5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#2a7ab9'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'average share of the pond (%)'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'The 15 most common types in Boyce Park'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'average share of the pond (%)'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'The 15 most common types in Boyce Park'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -9293,9 +9203,7 @@ Chloroflexi          0.8
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-4:-Two-comparison-pictures">Step 4: Two comparison pictures<a class="anchor-link" href="#Step-4:-Two-comparison-pictures">¶</a></h2><p>To compare whole communities we make a kind of <strong>similarity map</strong>. Each dot is one water sample. Samples with similar life sit close together; samples with different life sit far apart. (Under the hood this scores how different every pair of samples is, then lays them out on a 2D map.)</p>
-<p><strong>Picture A</strong> puts our pond next to the rivers and the other sites.
-<strong>Picture B</strong> zooms in on just our own pond, colored by sampling spot.</p>
+<h2 id="Step-4:-Two-comparison-pictures">Step 4: Two comparison pictures<a class="anchor-link" href="#Step-4:-Two-comparison-pictures">¶</a></h2><p>A <strong>similarity map</strong>: each dot is a water sample, and similar samples sit close together. Picture A puts our pond next to the rivers. Picture B shows just our own sampling spots.</p>
 </div>
 </div>
 </div>
@@ -9308,16 +9216,13 @@ Chloroflexi          0.8
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">difference_scores</span><span class="p">(</span><span class="n">mat</span><span class="p">):</span>
-    <span class="c1"># for every pair of samples, a 0 to 1 score of how different they are</span>
     <span class="n">n</span><span class="o">=</span><span class="n">mat</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="n">D</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">));</span> <span class="n">rs</span><span class="o">=</span><span class="n">mat</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
             <span class="n">den</span><span class="o">=</span><span class="n">rs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">rs</span><span class="p">[</span><span class="n">j</span><span class="p">];</span> <span class="n">d</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">mat</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">den</span><span class="p">)</span> <span class="k">if</span> <span class="n">den</span> <span class="k">else</span> <span class="mf">0.0</span>
             <span class="n">D</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">d</span>
     <span class="k">return</span> <span class="n">D</span>
-
 <span class="k">def</span><span class="w"> </span><span class="nf">make_map</span><span class="p">(</span><span class="n">D</span><span class="p">):</span>
-    <span class="c1"># turn the difference scores into 2D dots for the map</span>
     <span class="n">n</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="n">A</span><span class="o">=-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">;</span> <span class="n">J</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span><span class="o">/</span><span class="n">n</span><span class="p">;</span> <span class="n">B</span><span class="o">=</span><span class="n">J</span><span class="nd">@A@J</span>
     <span class="n">val</span><span class="p">,</span><span class="n">vec</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">B</span><span class="p">);</span> <span class="n">idx</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">val</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span> <span class="n">val</span><span class="p">,</span><span class="n">vec</span><span class="o">=</span><span class="n">val</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span><span class="n">vec</span><span class="p">[:,</span><span class="n">idx</span><span class="p">]</span>
     <span class="n">pos</span><span class="o">=</span><span class="n">val</span><span class="o">&gt;</span><span class="mf">1e-9</span><span class="p">;</span> <span class="k">return</span> <span class="n">vec</span><span class="p">[:,</span><span class="n">pos</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="n">pos</span><span class="p">]),</span> <span class="n">val</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">/</span><span class="n">val</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -9334,8 +9239,7 @@ Chloroflexi          0.8
 <div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Picture A: our pond next to the rivers and other water sites</span>
-<span class="n">water</span><span class="o">=</span><span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">base</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">basemap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'TreatmentGroup'</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'Water'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">basemap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'TreatmentGroup'</span><span class="p">]</span><span class="o">==</span><span class="s1">'Uncategorized'</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">water</span><span class="o">=</span><span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">base</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">basemap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'TreatmentGroup'</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'Water'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">basemap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'TreatmentGroup'</span><span class="p">]</span><span class="o">==</span><span class="s1">'Uncategorized'</span><span class="p">]</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">group_of</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="n">tg</span><span class="o">=</span><span class="n">basemap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'TreatmentGroup'</span><span class="p">]</span>
     <span class="k">if</span> <span class="s1">'Boyce'</span> <span class="ow">in</span> <span class="n">tg</span> <span class="ow">or</span> <span class="n">tg</span><span class="o">==</span><span class="s1">'Uncategorized'</span><span class="p">:</span> <span class="k">return</span> <span class="s1">'Boyce Park (us)'</span>
@@ -9351,11 +9255,10 @@ Chloroflexi          0.8
 <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'city rivers'</span><span class="p">,</span><span class="s1">'Hazelwood Green'</span><span class="p">,</span><span class="s1">'Carrie Furnace water'</span><span class="p">,</span><span class="s1">'clean water control'</span><span class="p">,</span><span class="s1">'Boyce Park (us)'</span><span class="p">,</span><span class="s1">'other water'</span><span class="p">]:</span>
     <span class="n">ix</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">groups</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="n">g</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">ix</span><span class="p">:</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">coords</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">s</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">g</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">col</span><span class="p">[</span><span class="n">g</span><span class="p">],</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s1">'*'</span> <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'Boyce'</span><span class="p">)</span> <span class="k">else</span> <span class="s1">'o'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'map direction 1 ('</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'map direction 2 ('</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Similarity map: Boyce Park next to the rivers'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'map direction 1 ('</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'map direction 2 ('</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Similarity map: Boyce Park next to the rivers'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -9381,19 +9284,17 @@ Chloroflexi          0.8
 <div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Picture B: just our pond, colored by sampling spot</span>
-<span class="n">coords_b</span><span class="p">,</span><span class="n">share_b</span><span class="o">=</span><span class="n">make_map</span><span class="p">(</span><span class="n">difference_scores</span><span class="p">(</span><span class="n">bp</span><span class="p">[</span><span class="n">samples</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">coords_b</span><span class="p">,</span><span class="n">share_b</span><span class="o">=</span><span class="n">make_map</span><span class="p">(</span><span class="n">difference_scores</span><span class="p">(</span><span class="n">bp</span><span class="p">[</span><span class="n">samples</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
 <span class="n">spots</span><span class="o">=</span><span class="p">[</span><span class="n">bmap</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="s1">'spot'</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">samples</span><span class="p">]</span>
 <span class="n">sc</span><span class="o">=</span><span class="p">{</span><span class="s1">'BP1'</span><span class="p">:</span><span class="s1">'#2980b9'</span><span class="p">,</span><span class="s1">'BP2'</span><span class="p">:</span><span class="s1">'#27ae60'</span><span class="p">,</span><span class="s1">'BP4'</span><span class="p">:</span><span class="s1">'#e67e22'</span><span class="p">,</span><span class="s1">'BP5'</span><span class="p">:</span><span class="s1">'#8e44ad'</span><span class="p">}</span>
 <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">sp</span> <span class="ow">in</span> <span class="n">spot_order</span><span class="p">:</span>
     <span class="n">ix</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">spots</span><span class="p">)</span> <span class="k">if</span> <span class="n">s</span><span class="o">==</span><span class="n">sp</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">ix</span><span class="p">:</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">coords_b</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">coords_b</span><span class="p">[</span><span class="n">ix</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">s</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="n">sp</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="n">sp</span><span class="p">],</span><span class="n">edgecolor</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'map direction 1 ('</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share_b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'map direction 2 ('</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share_b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Similarity map: our own sampling spots'</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'map direction 1 ('</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share_b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'map direction 2 ('</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">share_b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">+</span><span class="s1">'</span><span class="si">% o</span><span class="s1">f the difference)'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'Similarity map: our own sampling spots'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">'grey'</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">.4</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -9418,112 +9319,116 @@ Chloroflexi          0.8
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-5:-The-story-we-found">Step 5: The story we found<a class="anchor-link" href="#Step-5:-The-story-we-found">¶</a></h2><h3 id="Who-lives-in-the-pond">Who lives in the pond<a class="anchor-link" href="#Who-lives-in-the-pond">¶</a></h3><p>Boyce Park pond is not the clean, healthy community you might guess from how it looks. It is run by one iron eating bacterium, with a lot of algae, sitting on top of a crew of acid loving bacteria. That whole mix is the classic fingerprint of <strong>acid mine drainage</strong>, the acidic, iron rich runoff that old coal mines leave behind.</p>
-<p>Here are the main characters, in plain terms:</p>
+<h2 id="Step-5:-The-story">Step 5: The story<a class="anchor-link" href="#Step-5:-The-story">¶</a></h2><p>The pond is run by <strong>one iron eating bacterium</strong>, plus <strong>algae</strong>, plus a crew of <strong>acid loving microbes</strong>. That mix is the fingerprint of <strong>acid mine drainage</strong>: acidic, iron rich runoff from old coal mines.</p>
+<p>The main characters, in plain words:</p>
 <table>
 <thead>
 <tr>
 <th>Living thing</th>
-<th>What it is and what it does</th>
+<th>What it is</th>
 <th>What it tells us</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>Ferrovum</strong></td>
-<td>An iron eating bacterium. It makes its living by rusting the iron dissolved in the water, and it only survives in acidic, iron rich water.</td>
-<td>It is the single most common thing in the pond (about a third of everything), and it is a well known sign of mine drainage.</td>
+<td>An iron eating bacterium. The most common thing in the pond.</td>
+<td>Only lives in acidic, iron rich mine water. Our top clue.</td>
 </tr>
 <tr>
 <td><strong>Eunotia (an alga)</strong></td>
-<td>A tiny glass shelled alga that lives by photosynthesis, like a plant. This particular kind is famous for living in acidic water, so it backs up the mine drainage story.</td>
-<td>The pond really is green and alive, just with acid loving algae.</td>
+<td>An acid loving alga that lives by photosynthesis.</td>
+<td>The pond is green, but with acid loving algae.</td>
 </tr>
 <tr>
 <td><strong>Acidocella and Acidiphilium</strong></td>
-<td>Acid loving bacteria that feed on bits of leftover organic material. They are classic residents of acidic, iron rich mine water and do not belong in a normal, healthy pond..</td>
-<td>Fits an acidic, mine shaped pond.</td>
+<td>Acid loving bacteria that eat leftover scraps.</td>
+<td>Classic mine water residents.</td>
 </tr>
 <tr>
 <td><strong>Acidimicrobiaceae</strong></td>
-<td>Another acid loving group that helps cycle iron in the water. More support for an acidic, iron rich pond..</td>
-<td>Fits an acidic, mine shaped pond.</td>
-</tr>
-<tr>
-<td><strong>Roseiarcus</strong></td>
-<td>An acid loving bacterium usually found in boggy, acidic water. One more vote for acidic conditions..</td>
-<td>Fits an acidic, mine shaped pond.</td>
+<td>An acid loving group that recycles iron.</td>
+<td>More acidic, iron rich signal.</td>
 </tr>
 <tr>
 <td><strong>Rhodanobacter</strong></td>
-<td>A bacterium that copes well with acid and pollution. Seeing a lot of it points to acidic, polluted water..</td>
-<td>Fits an acidic, mine shaped pond.</td>
+<td>A bacterium that copes with acid and pollution.</td>
+<td>Points to acidic, polluted water.</td>
 </tr>
 <tr>
 <td><strong>Kocuria and Lawsonella</strong></td>
-<td>These are skin bacteria, not water bacteria. They got in from handling the samples.</td>
-<td>We found them in our clean water controls, so we treat them as contamination and leave them out of the story.</td>
+<td>Skin bacteria, not water bacteria.</td>
+<td>Contamination from handling. We ignore them.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="What-surprised-us">What surprised us<a class="anchor-link" href="#What-surprised-us">¶</a></h3><p>The biggest surprise was the number one microbe. The lab only labeled it a broad group, but our own search identified it as <strong>Ferrovum</strong>, an iron eater tied to mine drainage. Some of its closest public matches are even labeled with mine drainage names. So doing the search ourselves found something the automatic pipeline missed.</p>
-<p>The second surprise was that even the <strong>algae point to acid</strong>. About a fifth of the pond is algae, and the kinds we found (like the diatom Eunotia) are ones that prefer acidic water. So the pond looks green and healthy, but it is green in an acidic way.</p>
-<h3 id="What-these-tiny-things-are-doing">What these tiny things are doing<a class="anchor-link" href="#What-these-tiny-things-are-doing">¶</a></h3><p>A community whose primary producers are iron eating bacteria (Ferrovum) instead of the cyanobacteria and green algae of a normal pond, whose bacteria that eat leftover material are obligate acidophiles that scavenge scarce organic carbon and respire rusted iron iron (Acidiphilium, Acidocella), and whose actinobacterial iron-cyclers (Acidimicrobiaceae) close a tight dissolved iron-rusted iron redox loop, is the textbook biological fingerprint of acid mine drainage. These taxa are physiologically restricted to about pH 2 to 4 and run their metabolism on abundant dissolved dissolved iron iron and sulfate (a mine chemical), so their dominance is a direct living proxy for low pH plus high dissolved iron and sulfate (a mine chemical), the chemistry produced when pyrite (fool's gold, common in coal) in coal-bearing strata is oxidatively weathered. The acidophilic diatom Eunotia corroborates this, being a classic acidification living warning sign that outcompetes normal (not acidic) diatoms only below roughly pH 5 to 5.5. Diagnostically, diversity is also low and skewed toward a few iron and sulfur specialists, because few metabolisms are thermodynamically favorable under such extreme metal-rich acidity (Baker and Banfield 2003; Johnson and Hallberg 2003; Mendez-Garcia et al 2015). In short, the microbiome answers the guiding question bluntly: the water does not live up to its scenic looks, because its residents are being selected by mine-drainage chemistry rather than by a healthy normal (not acidic) pond.</p>
-<h3 id="Being-honest-about-contamination">Being honest about contamination<a class="anchor-link" href="#Being-honest-about-contamination">¶</a></h3><p>Our clean water controls were not empty. They picked up skin bacteria (<strong>Kocuria</strong> and <strong>Lawsonella</strong>), so we flagged those as contamination and dropped them. The important part: the mine drainage crew (Ferrovum, the acid lovers, the acid loving algae) barely showed up in the controls at all, so those findings are real and trustworthy.</p>
-<h3 id="The-answer-to-the-question">The answer to the question<a class="anchor-link" href="#The-answer-to-the-question">¶</a></h3><p><strong>Is mine drainage shaping who lives in the pond? Yes.</strong> Even though the pond looks scenic, the life inside it is the kind you only find in acidic, iron rich, mine shaped water, and on our comparison map it sits clearly apart from the city rivers. The one thing that would make this airtight is a simple water test for acidity and iron, which we can ask the instructors for.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Step-6:-Every-tool-we-used,-in-plain-terms">Step 6: Every tool we used, in plain terms<a class="anchor-link" href="#Step-6:-Every-tool-we-used,-in-plain-terms">¶</a></h2><ul>
-<li><strong>The lab's files.</strong> A lab read the DNA ID tag (the 16S gene) of the microbes in each water sample, cleaned up the data, and made a best guess at each name. We treat those guesses as a starting point, not the final word.</li>
-<li><strong>BLAST.</strong> A free NIH tool that takes a piece of DNA and finds its closest match in a huge public library. We used the big general library because the special microbe only library is not available to the automatic version of the tool. We report how close each match is. We trust broad names more than exact species names.</li>
-<li><strong>The clean water controls.</strong> Bottles of pure water run through the same machines. Anything common in them is contamination, so we removed it (the skin bacteria).</li>
-<li><strong>Shares instead of raw counts.</strong> We turn counts into percentages so a sample is not judged bigger just because more of its DNA happened to be read.</li>
-<li><strong>The similarity maps.</strong> We score how different every pair of samples is, then lay the samples out as dots so that similar ones sit close together.</li>
-<li><strong>About the shared folder.</strong> The set we used has every kind of site in it. For the rivers comparison we used only the water samples from it. There is also a water only version of this set that is the more official choice, and switching to it is a one line change.</li>
-<li><strong>What we left out on purpose.</strong> The project lists two optional extras (a function predictor called PICRUSt and a statistics test). We left both out to keep this notebook simple and focused on the required steps.</li>
-</ul>
-<p>Everything above can be re run from the code in this notebook. We used AI as a helper for writing and code, but we understand and stand behind every step.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Where-our-facts-come-from">Where our facts come from<a class="anchor-link" href="#Where-our-facts-come-from">¶</a></h2><p>These are the main sources behind what we said about each organism.</p>
+<p>Two surprises:</p>
 <ul>
-<li>Ullrich et al. 2016, PLOS ONE : Genome Analysis of the Acidophilic Iron-Oxidising Strain JA12 Indicates Phylogenetic and Metabolic Diversity within the Novel Genus "Ferrovum" (Betaproteobacteria; chemolithoautotrophy, CO2 fixation, provisional genus, species-level 16S limits) (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146832">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146832</a>)</li>
-<li>Grettenberger et al. 2020, BMC Microbiology : Metabolic diversity and co-occurrence of multiple Ferrovum species at an acid mine drainage site (AMD pH ~2.1 to 2.4, high Fe(II), multiple co-occurring Ferrovum species, dominance in AMD) (<a href="https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-020-01768-w">https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-020-01768-w</a>)</li>
-<li>Mühling et al. 2014, Genome Announcements (ASM) : Draft Genome Sequence of the Nominated Type Strain of "Ferrovum myxofaciens" P3G, an Acidophilic, Iron-Oxidizing Betaproteobacterium (EPS/streamer biofilms; Mynydd Parys AMD, Wales) (<a href="https://journals.asm.org/doi/10.1128/genomea.00834-14">https://journals.asm.org/doi/10.1128/genomea.00834-14</a>)</li>
-<li>San-Martin-Uriz et al. 2020, mSystems : Insights into the Metabolism and Evolution of the Genus Acidiphilium, a Typical Acidophile in Acid Mine Drainage (<a href="https://journals.asm.org/doi/10.1128/msystems.00867-20">https://journals.asm.org/doi/10.1128/msystems.00867-20</a>)</li>
-<li>Bridge &amp; Johnson 2002 (Reduction of ferric iron by acidophilic heterotrophic bacteria: constitutive and inducible enzyme systems in Acidiphilium spp.), PubMed (<a href="https://pubmed.ncbi.nlm.nih.gov/11849360/">https://pubmed.ncbi.nlm.nih.gov/11849360/</a>)</li>
-<li>Sievers et al. : Phylogenetic positioning of Acetobacter, Gluconobacter, Rhodopila and Acidiphilium as a branch of acidophilic bacteria in the alpha-subclass of Proteobacteria based on 16S rDNA (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0723202011800068">https://www.sciencedirect.com/science/article/abs/pii/S0723202011800068</a>)</li>
-<li>LPSN (DSMZ) : Genus Acidocella: taxonomy, type species (A. facilis, Kishimoto et al. 1996), family Acetobacteraceae, species list, isolation from acidic coal-mine drainage, and phylogenomic uncertainty note. (<a href="https://lpsn.dsmz.de/genus/acidocella">https://lpsn.dsmz.de/genus/acidocella</a>)</li>
-<li>Johnson et al. 2001, Environmental Microbiology : Isolation and phylogenetic characterization of acidophilic microorganisms from acidic drainage at an abandoned copper mine; documents Acidocella facilis-like isolates (~96% 16S identity) as heterotrophic acidophiles in AMD (pH ~2.7-3.7). (<a href="https://ami-journals.onlinelibrary.wiley.com/doi/full/10.1046/j.1462-2920.2001.00234.x">https://ami-journals.onlinelibrary.wiley.com/doi/full/10.1046/j.1462-2920.2001.00234.x</a>)</li>
-<li>Méndez-García / González-Toril style review : 'Acidophilic heterotrophs: basic aspects and technological applications,' Frontiers in Microbiology 2024; classifies Acidocella among strictly respiratory acidophilic heterotrophs (O2 as terminal acceptor) and notes A. aromatica metal-nanoparticle/organic-carbon roles. (<a href="https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2024.1374800/full">https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2024.1374800/full</a>)</li>
-<li>Kulichevskaya IS, et al. (2014) Descriptions of Roseiarcus fermentans gen. nov., sp. nov., a bacteriochlorophyll a-containing fermentative bacterium related phylogenetically to alphaproteobacterial methanotrophs, and of the family Roseiarcaceae fam. nov. Int J Syst Evol Microbiol 64:2558-2565 (original description; morphology, pH/temperature ranges, 16S similarities, bacteriochlorophyll, family erection). (<a href="https://www.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.064576-0">https://www.microbiologyresearch.org/content/journal/ijsem/10.1099/ijs.0.064576-0</a>)</li>
-<li>LPSN (List of Prokaryotic names with Standing in Nomenclature) - Genus Roseiarcus (nomenclature, type species, family Roseiarcaceae, authorship Kulichevskaya et al. 2014). (<a href="https://lpsn.dsmz.de/genus/roseiarcus">https://lpsn.dsmz.de/genus/roseiarcus</a>)</li>
-<li>Serkebaeva YM / Dedysh SN et al. (2020) Bacterial Communities of Regressive Spots in Ombrotrophic Bogs: Structure and Functions, Microbiology (Springer) - documents Roseiarcus/Beijerinckiaceae abundance in acidic peat bog/flark habitats (ecological/environmental context). (<a href="https://link.springer.com/article/10.1134/S0026261720010063">https://link.springer.com/article/10.1134/S0026261720010063</a>)</li>
-<li>Hordt A, et al. (2024/2023) Refining the taxonomy of the order Hyphomicrobiales (Rhizobiales) based on whole-genome comparisons of &gt;130 type strains, Int J Syst Evol Microbiol - confirms order-level (Hyphomicrobiales/Rhizobiales) placement and notes Roseiarcaceae non-monophyly (Rhodoblastus vs Roseiarcus). (<a href="https://www.microbiologyresearch.org/content/journal/ijsem/10.1099/ijsem.0.006328">https://www.microbiologyresearch.org/content/journal/ijsem/10.1099/ijsem.0.006328</a>)</li>
-<li>DeNicola, D.M. (2000). A review of diatoms found in highly acidic environments. Hydrobiologia 433:111-122 : establishes Eunotia as a dominant acidobiontic/acidophilous genus of highly acidic and AMD-affected waters. (<a href="https://link.springer.com/article/10.1023/A:1004066620172">https://link.springer.com/article/10.1023/A:1004066620172</a>)</li>
-<li>Molecular complexity of the differential growth of freshwater diatoms along pH gradients (2025), PMC : characterizes Eunotia strains as acidophiles with fastest growth at pH ~4.7 and documents the genus's low-pH adaptation. (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12145874/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12145874/</a>)</li>
-<li>American Society for Microbiology : Impact of Acid Mine Drainage (AMD) on diatom populations in a Pennsylvania stream: Eunotia found as the only diatom genus at average pH ~3.4. (<a href="https://asm.org/image-gallery/impact-of-acid-mine-drainage-amd-on-diatom-popul">https://asm.org/image-gallery/impact-of-acid-mine-drainage-amd-on-diatom-popul</a>)</li>
+<li>The number one microbe: the lab only called it a broad group, but our search named it <strong>Ferrovum</strong>, a mine drainage iron eater.</li>
+<li>Even the algae like acid (the <strong>Eunotia</strong> alga), so the pond is green in an acidic way.</li>
+</ul>
+<p>Being honest: the skin bacteria <strong>Kocuria</strong> and <strong>Lawsonella</strong> showed up in the clean water controls, so we dropped them as contamination. The mine drainage microbes were <strong>not</strong> in the controls, so they are real.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Conclusion:-our-answer">Conclusion: our answer<a class="anchor-link" href="#Conclusion:-our-answer">¶</a></h2><p><strong>The question:</strong> does Boyce Park pond live up to its scenic looks, or is mine drainage shaping who lives there?</p>
+<p><strong>Our answer: mine drainage is shaping it, and one microbe proves it.</strong></p>
+<p>The most common living thing in the pond (about <strong>1 in 3 of everything</strong>) is <strong>Ferrovum</strong>, an iron eating bacterium. Its closest DNA match is the strain <strong>Ferrovum sp. PN-J174, at 99% match</strong>. Ferrovum only lives in acidic, iron rich water, the kind old coal mines leave behind. Acid loving bacteria (Acidocella, Acidiphilium) and even acid loving algae (Eunotia) back it up, and none of them showed up in our clean water controls.</p>
+<p><strong>So the pretty pond is really acid mine drainage water, and the microbe that gives it away is Ferrovum.</strong> A quick pH and iron test would confirm it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Step-6:-The-tools-we-used,-in-plain-words">Step 6: The tools we used, in plain words<a class="anchor-link" href="#Step-6:-The-tools-we-used,-in-plain-words">¶</a></h2><ul>
+<li><strong>Lab files:</strong> a lab read the DNA barcode (the 16S gene) of each microbe and guessed a name. We double check those guesses.</li>
+<li><strong>BLAST:</strong> an NIH tool that finds the closest DNA match. We trust broad names more than exact species names.</li>
+<li><strong>Clean water controls:</strong> catch contamination (the skin bacteria), which we then drop.</li>
+<li><strong>Shares, not raw counts:</strong> so a sample is not judged bigger just because more of its DNA was read.</li>
+<li><strong>Similarity maps:</strong> place similar samples close together.</li>
+<li><strong>Left out on purpose:</strong> two optional extras (PICRUSt and a stats test), to keep this simple.</li>
+</ul>
+<p>AI helped us write and code, but we understand and stand behind every step.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Where-our-facts-come-from">Where our facts come from<a class="anchor-link" href="#Where-our-facts-come-from">¶</a></h2><p>A few of the main sources behind what we said:</p>
+<ul>
+<li>Ullrich et al. 2016, PLOS ONE (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146832">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0146832</a>)</li>
+<li>Grettenberger et al. 2020, BMC Microbiology (<a href="https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-020-01768-w">https://bmcmicrobiol.biomedcentral.com/articles/10.1186/s12866-020-01768-w</a>)</li>
+<li>Mühling et al. 2014, Genome Announcements (ASM) (<a href="https://journals.asm.org/doi/10.1128/genomea.00834-14">https://journals.asm.org/doi/10.1128/genomea.00834-14</a>)</li>
+<li>San-Martin-Uriz et al. 2020, mSystems (<a href="https://journals.asm.org/doi/10.1128/msystems.00867-20">https://journals.asm.org/doi/10.1128/msystems.00867-20</a>)</li>
+<li>Bridge &amp; Johnson 2002 (Reduction of ferric iron by acidophilic heterotrophic bacteria (<a href="https://pubmed.ncbi.nlm.nih.gov/11849360/">https://pubmed.ncbi.nlm.nih.gov/11849360/</a>)</li>
+<li>Sievers et al. (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0723202011800068">https://www.sciencedirect.com/science/article/abs/pii/S0723202011800068</a>)</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </main>
+
+<footer class="site-foot">
+  <b>Group A3, the Alphas:</b> Thomas Yu, Thomas Kellog, Lexi Dai, Sarah Wu.<br>
+  This page is a read-only view of our notebook. Click <b>Run every cell in Colab</b> up top to run it yourself.
+</footer>
 </body>
 </html>
